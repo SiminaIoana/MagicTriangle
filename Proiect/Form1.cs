@@ -32,6 +32,9 @@ namespace Proiect
         public Form1()
         {
             InitializeComponent();
+            pictureBox1.MouseClick += new MouseEventHandler(pictureBox1_Click);
+            //pictureBox1.Paint += new PaintEventHandler(pictureBox1_Paint);
+            /////
         }
 
 
@@ -93,6 +96,11 @@ namespace Proiect
         }
 
         private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void richTextBoxCalculate_TextChanged(object sender, EventArgs e)
         {
 
         }

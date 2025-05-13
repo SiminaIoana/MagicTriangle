@@ -147,6 +147,7 @@
             this.richTextBoxCalculate.Size = new System.Drawing.Size(278, 146);
             this.richTextBoxCalculate.TabIndex = 11;
             this.richTextBoxCalculate.Text = "";
+            this.richTextBoxCalculate.TextChanged += new System.EventHandler(this.richTextBoxCalculate_TextChanged);
             // 
             // buttonHelp
             // 
