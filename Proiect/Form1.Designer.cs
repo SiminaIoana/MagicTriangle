@@ -62,6 +62,7 @@
             this.checkBoxBisectoare.TabIndex = 1;
             this.checkBoxBisectoare.Text = "Bisectoare";
             this.checkBoxBisectoare.UseVisualStyleBackColor = true;
+            
             // 
             // checkBoxMediane
             // 
@@ -111,7 +112,7 @@
             this.buttonRescrierePunct1.TabIndex = 6;
             this.buttonRescrierePunct1.Text = "Rescriere Punct1";
             this.buttonRescrierePunct1.UseVisualStyleBackColor = true;
-            this.buttonRescrierePunct1.Click += new System.EventHandler(this.button1_Click);
+            this.buttonRescrierePunct1.Click += new System.EventHandler(this.buttonRescrierePunct1_Click);
             // 
             // buttonRescrierePunct2
             // 
@@ -121,6 +122,7 @@
             this.buttonRescrierePunct2.TabIndex = 7;
             this.buttonRescrierePunct2.Text = "Rescriere Punct 2";
             this.buttonRescrierePunct2.UseVisualStyleBackColor = true;
+            this.buttonRescrierePunct2.Click += new System.EventHandler(this.buttonRescrierePunct2_Click);
             // 
             // buttonRescrierePunct3
             // 
@@ -130,6 +132,7 @@
             this.buttonRescrierePunct3.TabIndex = 8;
             this.buttonRescrierePunct3.Text = "Rescriere Punct 3";
             this.buttonRescrierePunct3.UseVisualStyleBackColor = true;
+            this.buttonRescrierePunct3.Click += new System.EventHandler(this.buttonRescrierePunct3_Click);
             // 
             // buttonAfisareValori
             // 
@@ -139,6 +142,7 @@
             this.buttonAfisareValori.TabIndex = 9;
             this.buttonAfisareValori.Text = "Afisare Valori";
             this.buttonAfisareValori.UseVisualStyleBackColor = true;
+            this.buttonAfisareValori.Click += new System.EventHandler(this.buttonAfisareValori_Click);
             // 
             // richTextBoxCalculate
             // 
@@ -157,6 +161,7 @@
             this.buttonHelp.TabIndex = 12;
             this.buttonHelp.Text = "Help";
             this.buttonHelp.UseVisualStyleBackColor = true;
+            this.buttonHelp.Click += new System.EventHandler(this.buttonHelp_Click);
             // 
             // buttonExit
             // 
@@ -166,6 +171,7 @@
             this.buttonExit.TabIndex = 13;
             this.buttonExit.Text = "Exit";
             this.buttonExit.UseVisualStyleBackColor = true;
+            this.buttonExit.Click += new System.EventHandler(this.buttonExit_Click);
             // 
             // Form1
             // 
@@ -187,7 +193,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Name = "Form1";
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
+            //this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
