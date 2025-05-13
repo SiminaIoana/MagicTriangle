@@ -29,175 +29,161 @@
         private void InitializeComponent()
         {
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
-            this.checkBox5 = new System.Windows.Forms.CheckBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.checkBoxBisectoare = new System.Windows.Forms.CheckBox();
+            this.checkBoxMediane = new System.Windows.Forms.CheckBox();
+            this.checkBoxInaltimi = new System.Windows.Forms.CheckBox();
+            this.checkBoxCercCircumscris = new System.Windows.Forms.CheckBox();
+            this.checkBoxCercInscris = new System.Windows.Forms.CheckBox();
+            this.buttonRescrierePunct1 = new System.Windows.Forms.Button();
+            this.buttonRescrierePunct2 = new System.Windows.Forms.Button();
+            this.buttonRescrierePunct3 = new System.Windows.Forms.Button();
+            this.buttonAfisareValori = new System.Windows.Forms.Button();
             this.richTextBoxCalculate = new System.Windows.Forms.RichTextBox();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
+            this.buttonHelp = new System.Windows.Forms.Button();
+            this.buttonExit = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(44, 235);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Location = new System.Drawing.Point(33, 191);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(984, 246);
+            this.pictureBox1.Size = new System.Drawing.Size(738, 200);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // checkBox1
+            // checkBoxBisectoare
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(636, 36);
-            this.checkBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(94, 20);
-            this.checkBox1.TabIndex = 1;
-            this.checkBox1.Text = "Bisectoare";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBoxBisectoare.AutoSize = true;
+            this.checkBoxBisectoare.Location = new System.Drawing.Point(477, 29);
+            this.checkBoxBisectoare.Name = "checkBoxBisectoare";
+            this.checkBoxBisectoare.Size = new System.Drawing.Size(76, 17);
+            this.checkBoxBisectoare.TabIndex = 1;
+            this.checkBoxBisectoare.Text = "Bisectoare";
+            this.checkBoxBisectoare.UseVisualStyleBackColor = true;
             // 
-            // checkBox2
+            // checkBoxMediane
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(636, 106);
-            this.checkBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(82, 20);
-            this.checkBox2.TabIndex = 2;
-            this.checkBox2.Text = "Mediane";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.checkBoxMediane.AutoSize = true;
+            this.checkBoxMediane.Location = new System.Drawing.Point(477, 86);
+            this.checkBoxMediane.Name = "checkBoxMediane";
+            this.checkBoxMediane.Size = new System.Drawing.Size(67, 17);
+            this.checkBoxMediane.TabIndex = 2;
+            this.checkBoxMediane.Text = "Mediane";
+            this.checkBoxMediane.UseVisualStyleBackColor = true;
             // 
-            // checkBox3
+            // checkBoxInaltimi
             // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(636, 182);
-            this.checkBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(70, 20);
-            this.checkBox3.TabIndex = 3;
-            this.checkBox3.Text = "Inaltimi";
-            this.checkBox3.UseVisualStyleBackColor = true;
+            this.checkBoxInaltimi.AutoSize = true;
+            this.checkBoxInaltimi.Location = new System.Drawing.Point(477, 148);
+            this.checkBoxInaltimi.Name = "checkBoxInaltimi";
+            this.checkBoxInaltimi.Size = new System.Drawing.Size(58, 17);
+            this.checkBoxInaltimi.TabIndex = 3;
+            this.checkBoxInaltimi.Text = "Inaltimi";
+            this.checkBoxInaltimi.UseVisualStyleBackColor = true;
             // 
-            // checkBox4
+            // checkBoxCercCircumscris
             // 
-            this.checkBox4.AutoSize = true;
-            this.checkBox4.Location = new System.Drawing.Point(835, 106);
-            this.checkBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(127, 20);
-            this.checkBox4.TabIndex = 4;
-            this.checkBox4.Text = "Cerc circumscris";
-            this.checkBox4.UseVisualStyleBackColor = true;
+            this.checkBoxCercCircumscris.AutoSize = true;
+            this.checkBoxCercCircumscris.Location = new System.Drawing.Point(626, 86);
+            this.checkBoxCercCircumscris.Name = "checkBoxCercCircumscris";
+            this.checkBoxCercCircumscris.Size = new System.Drawing.Size(103, 17);
+            this.checkBoxCercCircumscris.TabIndex = 4;
+            this.checkBoxCercCircumscris.Text = "Cerc circumscris";
+            this.checkBoxCercCircumscris.UseVisualStyleBackColor = true;
             // 
-            // checkBox5
+            // checkBoxCercInscris
             // 
-            this.checkBox5.AutoSize = true;
-            this.checkBox5.Location = new System.Drawing.Point(835, 38);
-            this.checkBox5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.checkBox5.Name = "checkBox5";
-            this.checkBox5.Size = new System.Drawing.Size(98, 20);
-            this.checkBox5.TabIndex = 5;
-            this.checkBox5.Text = "Cerc inscris";
-            this.checkBox5.UseVisualStyleBackColor = true;
+            this.checkBoxCercInscris.AutoSize = true;
+            this.checkBoxCercInscris.Location = new System.Drawing.Point(626, 31);
+            this.checkBoxCercInscris.Name = "checkBoxCercInscris";
+            this.checkBoxCercInscris.Size = new System.Drawing.Size(80, 17);
+            this.checkBoxCercInscris.TabIndex = 5;
+            this.checkBoxCercInscris.Text = "Cerc inscris";
+            this.checkBoxCercInscris.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // buttonRescrierePunct1
             // 
-            this.button1.Location = new System.Drawing.Point(44, 31);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(149, 28);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Rescriere Punct1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.buttonRescrierePunct1.Location = new System.Drawing.Point(33, 25);
+            this.buttonRescrierePunct1.Name = "buttonRescrierePunct1";
+            this.buttonRescrierePunct1.Size = new System.Drawing.Size(112, 23);
+            this.buttonRescrierePunct1.TabIndex = 6;
+            this.buttonRescrierePunct1.Text = "Rescriere Punct1";
+            this.buttonRescrierePunct1.UseVisualStyleBackColor = true;
+            this.buttonRescrierePunct1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button2
+            // buttonRescrierePunct2
             // 
-            this.button2.Location = new System.Drawing.Point(44, 78);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(149, 28);
-            this.button2.TabIndex = 7;
-            this.button2.Text = "Rescriere Punct 2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.buttonRescrierePunct2.Location = new System.Drawing.Point(33, 63);
+            this.buttonRescrierePunct2.Name = "buttonRescrierePunct2";
+            this.buttonRescrierePunct2.Size = new System.Drawing.Size(112, 23);
+            this.buttonRescrierePunct2.TabIndex = 7;
+            this.buttonRescrierePunct2.Text = "Rescriere Punct 2";
+            this.buttonRescrierePunct2.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // buttonRescrierePunct3
             // 
-            this.button3.Location = new System.Drawing.Point(44, 128);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(149, 28);
-            this.button3.TabIndex = 8;
-            this.button3.Text = "Rescriere Punct 3";
-            this.button3.UseVisualStyleBackColor = true;
+            this.buttonRescrierePunct3.Location = new System.Drawing.Point(33, 104);
+            this.buttonRescrierePunct3.Name = "buttonRescrierePunct3";
+            this.buttonRescrierePunct3.Size = new System.Drawing.Size(112, 23);
+            this.buttonRescrierePunct3.TabIndex = 8;
+            this.buttonRescrierePunct3.Text = "Rescriere Punct 3";
+            this.buttonRescrierePunct3.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // buttonAfisareValori
             // 
-            this.button4.Location = new System.Drawing.Point(44, 182);
-            this.button4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(149, 28);
-            this.button4.TabIndex = 9;
-            this.button4.Text = "Afisare Valori";
-            this.button4.UseVisualStyleBackColor = true;
+            this.buttonAfisareValori.Location = new System.Drawing.Point(33, 148);
+            this.buttonAfisareValori.Name = "buttonAfisareValori";
+            this.buttonAfisareValori.Size = new System.Drawing.Size(112, 23);
+            this.buttonAfisareValori.TabIndex = 9;
+            this.buttonAfisareValori.Text = "Afisare Valori";
+            this.buttonAfisareValori.UseVisualStyleBackColor = true;
             // 
             // richTextBoxCalculate
             // 
-            this.richTextBoxCalculate.Location = new System.Drawing.Point(223, 31);
-            this.richTextBoxCalculate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.richTextBoxCalculate.Location = new System.Drawing.Point(167, 25);
             this.richTextBoxCalculate.Name = "richTextBoxCalculate";
-            this.richTextBoxCalculate.Size = new System.Drawing.Size(369, 179);
+            this.richTextBoxCalculate.Size = new System.Drawing.Size(278, 146);
             this.richTextBoxCalculate.TabIndex = 11;
             this.richTextBoxCalculate.Text = "";
             // 
-            // button5
+            // buttonHelp
             // 
-            this.button5.Location = new System.Drawing.Point(800, 511);
-            this.button5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(100, 28);
-            this.button5.TabIndex = 12;
-            this.button5.Text = "Help";
-            this.button5.UseVisualStyleBackColor = true;
+            this.buttonHelp.Location = new System.Drawing.Point(600, 415);
+            this.buttonHelp.Name = "buttonHelp";
+            this.buttonHelp.Size = new System.Drawing.Size(75, 23);
+            this.buttonHelp.TabIndex = 12;
+            this.buttonHelp.Text = "Help";
+            this.buttonHelp.UseVisualStyleBackColor = true;
             // 
-            // button6
+            // buttonExit
             // 
-            this.button6.Location = new System.Drawing.Point(928, 511);
-            this.button6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(100, 28);
-            this.button6.TabIndex = 13;
-            this.button6.Text = "Exit";
-            this.button6.UseVisualStyleBackColor = true;
+            this.buttonExit.Location = new System.Drawing.Point(696, 415);
+            this.buttonExit.Name = "buttonExit";
+            this.buttonExit.Size = new System.Drawing.Size(75, 23);
+            this.buttonExit.TabIndex = 13;
+            this.buttonExit.Text = "Exit";
+            this.buttonExit.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1067, 554);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button5);
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.buttonExit);
+            this.Controls.Add(this.buttonHelp);
             this.Controls.Add(this.richTextBoxCalculate);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.checkBox5);
-            this.Controls.Add(this.checkBox4);
-            this.Controls.Add(this.checkBox3);
-            this.Controls.Add(this.checkBox2);
-            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.buttonAfisareValori);
+            this.Controls.Add(this.buttonRescrierePunct3);
+            this.Controls.Add(this.buttonRescrierePunct2);
+            this.Controls.Add(this.buttonRescrierePunct1);
+            this.Controls.Add(this.checkBoxCercInscris);
+            this.Controls.Add(this.checkBoxCercCircumscris);
+            this.Controls.Add(this.checkBoxInaltimi);
+            this.Controls.Add(this.checkBoxMediane);
+            this.Controls.Add(this.checkBoxBisectoare);
             this.Controls.Add(this.pictureBox1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -210,18 +196,18 @@
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox checkBox3;
-        private System.Windows.Forms.CheckBox checkBox4;
-        private System.Windows.Forms.CheckBox checkBox5;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.CheckBox checkBoxBisectoare;
+        private System.Windows.Forms.CheckBox checkBoxMediane;
+        private System.Windows.Forms.CheckBox checkBoxInaltimi;
+        private System.Windows.Forms.CheckBox checkBoxCercCircumscris;
+        private System.Windows.Forms.CheckBox checkBoxCercInscris;
+        private System.Windows.Forms.Button buttonRescrierePunct1;
+        private System.Windows.Forms.Button buttonRescrierePunct2;
+        private System.Windows.Forms.Button buttonRescrierePunct3;
+        private System.Windows.Forms.Button buttonAfisareValori;
         public System.Windows.Forms.RichTextBox richTextBoxCalculate;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button buttonHelp;
+        private System.Windows.Forms.Button buttonExit;
     }
 }
 
