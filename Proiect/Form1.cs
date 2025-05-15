@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace Proiect
 {
-    public partial class Form1: Form, IObservableObj
+    public partial class Form1 : Form, IObservableObj
     {
         //atributele necesare pentru desenarea triunghiului
         private int nOfPoints = 0;
@@ -25,7 +25,7 @@ namespace Proiect
 
         //lista de urmaritori
         private List<ISubscriber> subscriber = new List<ISubscriber>();
-       
+
         /// <summary>
         /// Functie pentru initializarile componentelor necesare de pe interfata
         /// </summary>
@@ -70,7 +70,7 @@ namespace Proiect
 
         public double GetDistanta(Point p1, Point p2)
         {
-            return CalculeazDistanta(p1,p2);
+            return CalculeazDistanta(p1, p2);
         }
 
         public double GetCentruDeGreutate(Point p1, Point p2, Point p3)
@@ -128,7 +128,7 @@ namespace Proiect
         {
 
         }
-        
+
 
         /// <summary>
         /// Zona pentru afisarea valorilor masuratorilor
@@ -167,8 +167,8 @@ namespace Proiect
         /// <param name="e"></param>
         private void buttonHelp_Click(object sender, EventArgs e)
         {
-            
-            
+
+
         }
 
         /// <summary>
@@ -192,7 +192,7 @@ namespace Proiect
 
         }
 
-        
+
 
         /// <summary>
         /// Functie de callback pentru redesenarea al celui de al doilea punct al triunghiului
@@ -220,18 +220,19 @@ namespace Proiect
         //////    FUNCTII PENTRU CALCULE ASUPRA TRIUNGHIULUI    ////////////////////////////////////////////////////////////////////////
 
 
-        private double CalculeazDistanta(Point p1, Point p2)
+        private double CalculeazaDistanta(Point p1, Point p2)
         {
-            if(p1 == p2)
+            if (p1 == p2)
             {
                 throw new ArgumentException("Aceste puncte sunt identice");
             }
-            else {
+            else
+            {
                 double x1 = p1.X, x2 = p2.X;
                 double y1 = p1.Y, y2 = p2.Y;
                 double difX = Math.Pow((x1 - x2), 2);
                 double difY = Math.Pow((y1 - y2), 2);
-                return Math.Sqrt(difX - difY);
+                return Math.Sqrt(difX + difY); //hei, eu zic ca e cu + formula (tudor)
             }
 
 
@@ -240,61 +241,117 @@ namespace Proiect
         private double CalculeazaPerimetru(Point p1, Point p2, Point p3)
         {
 
-            ///trebuie facuta impplementare
-            return 2.0;
+            double l1 = CalculeazaDistanta(p1, p2);
+            double l2 = CalculeazaDistanta(p2, p3);
+            double l3 = CalculeazaDistanta(p3, p1);
+
+            return l1 + l2 + l2;
         }
 
         private double Arie(Point p1, Point p2, Point p3)
         {
-            return 2.0;
-            //trebuie facuta implementare
+            double l1 = CalculeazaDistanta(p1, p2);
+            double l2 = CalculeazaDistanta(p2, p3);
+            double l3 = CalculeazaDistanta(p3, p1);
+
+            double p = (l1 + l2 + l3) / 2;
+
+            return Math.Sqrt(p * (p - l1) * (p - l2) * (p - l3)); //formula lui Heron
         }
 
         private PointF CentruDeGreutate(Point p1, Point p2, Point p3)
         {
-            return new PointF(2, 3);
-            //trebuie facuta implementare
+            float x = (p1.X + p2.X + p3.X) / 3.0f;
+            float y = (p1.Y + p2.Y + p3.Y) / 3.0f;
+
+            return new PointF(x, y);
         }
 
 
         private PointF CentruCercInscris(Point p1, Point p2, Point p3)
         {
-            return new PointF(2, 3);
-            //trebuie facuta implementare;
+            double a = CalculeazaDistanta(p2, p3);
+            double b = CalculeazaDistanta(p1, p3);
+            double c = CalculeazaDistanta(p1, p2);
+
+            double sum = a + b + c;
+
+            float x = (float)((a * p1.X + b * p2.X + c * p3.X) / sum);
+            float y = (float)((a * p1.Y + b * p2.Y + c * p3.Y) / sum);
+
+            return new PointF(x, y);
         }
 
-        private PointF RazaCercInscris (Point p1, Point p2, Point p3)
+        private double RazaCercInscris(Point p1, Point p2, Point p3) //aici era de tip PointF da zic ca ar trb double nu??
         {
-            return new PointF(2, 3);
-            //trebuie facuta implementare;
+            double arie = Arie(p1, p2, p3);
+            double s = CalculeazaPerimetru(p1, p2, p3) / 2;
+
+            return arie / s;
+
         }
 
         private PointF CentruCercCircumscris(Point p1, Point p2, Point p3)
         {
-            return new PointF(2, 3);
-            //trebuie facuta implementare;
+            double a = CalculeazaDistanta(p2, p3);
+            double b = CalculeazaDistanta(p1, p3);
+            double c = CalculeazaDistanta(p1, p2);
+
+            double a2 = a * a;
+            double b2 = b * b;
+            double c2 = c * c;
+
+            double x = (a2 * p1.X + b2 * p2.X + c2 * p3.X) / (a2 + b2 + c2);
+            double y = (a2 * p1.Y + b2 * p2.Y + c2 * p3.Y) / (a2 + b2 + c2);
+
+            return new PointF((float)x, (float)y);
         }
 
-        private PointF RazaCercCircumscris(Point p1, Point p2, Point p3)
+        private double RazaCercCircumscris(Point p1, Point p2, Point p3) //la fel, double in loc de PointF idk
         {
-            return new PointF(2, 3);
-            //trebuie facuta implementare;
+            double a = CalculeazaDistanta(p1, p2);
+            double b = CalculeazaDistanta(p2, p3);
+            double c = CalculeazaDistanta(p3, p1);
+
+            double aria = Arie(p1, p2, p3);
+
+            if (aria == 0)
+            {
+                throw new ArgumentException("Punctele sunt coliniare, nu există cerc circumscris.");
+            }
+            return (a * b * c) / (4 * aria);
         }
 
         private PointF Ortocentru(Point p1, Point p2, Point p3)
         {
-            return new PointF(2, 3);
-            //trebuie facuta implementare;
+            float x1 = p1.X, y1 = p1.Y;
+            float x2 = p2.X, y2 = p2.Y;
+            float x3 = p3.X, y3 = p3.Y;
+
+            float a1 = x2 - x1;
+            float b1 = y2 - y1;
+            float a2 = x3 - x1;
+            float b2 = y3 - y1;
+
+            float c1 = a1 * (x1 + x2) + b1 * (y1 + y2);
+            float c2 = a2 * (x1 + x3) + b2 * (y1 + y3);
+
+            float d = 2 * (a1 * (y3 - y2) - b1 * (x3 - x2));
+
+            float x = (b2 * c1 - b1 * c2) / d;
+            float y = (a1 * c2 - a2 * c1) / d;
+
+            return new PointF(x, y);
         }
 
         /// <summary>
-        /// Functie ce va returna punctul de intersectie dintre o dreaptasi perpendiculara dusa dintr-un punct pe acea dreapta
+        /// Functie ce va returna punctul de intersectie dintre o dreapta si perpendiculara dusa dintr-un punct pe acea dreapta
         /// </summary>
         /// <param name="punct"></param>
         /// <param name="start"></param>
         /// <param name="end"></param>
         /// <returns></returns>
-        private PointF PerpendicularaPunctDreapta(Point p, Point startL, Point endL )
+        private PointF PerpendicularaPunctDreapta(Point p, Point startL, Point endL)
         {
             return new PointF(2, 3);
             //trebuie facuta implementare;
@@ -312,7 +369,7 @@ namespace Proiect
 
 
         //////    FUNCTII PENTRU DESENAREA TRIUNGHIULUI / ELEMENTELOR SPECIFICE TRIUNGHILUI    //////////////////////////////////////////////
-        
+
         private void DesenareTriunghi(Graphics g)
         {
             //de implementat
@@ -328,7 +385,7 @@ namespace Proiect
             //de implementat
         }
 
-        private void DesenareBisectoare( Graphics g, Point p1, Point p2, Point p3)
+        private void DesenareBisectoare(Graphics g, Point p1, Point p2, Point p3)
         {
             //de implementat
         }
