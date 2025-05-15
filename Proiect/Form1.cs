@@ -70,7 +70,7 @@ namespace Proiect
 
         public double GetDistanta(Point p1, Point p2)
         {
-            return 2;
+            return CalculeazDistanta(p1,p2);
         }
 
         public double GetCentruDeGreutate(Point p1, Point p2, Point p3)
@@ -102,7 +102,6 @@ namespace Proiect
         {
             return 2;
         }
-
 
 
         /// <summary>
@@ -219,15 +218,26 @@ namespace Proiect
 
 
         //////    FUNCTII PENTRU CALCULE ASUPRA TRIUNGHIULUI    ////////////////////////////////////////////////////////////////////////
-        
 
-        private double Distanta(Point p1, Point p2)
+
+        private double CalculeazDistanta(Point p1, Point p2)
         {
-            return 2;
-            //trebuie facuta implementare
+            if(p1 == p2)
+            {
+                throw new ArgumentException("Aceste puncte sunt identice");
+            }
+            else {
+                double x1 = p1.X, x2 = p2.X;
+                double y1 = p1.Y, y2 = p2.Y;
+                double difX = Math.Pow((x1 - x2), 2);
+                double difY = Math.Pow((y1 - y2), 2);
+                return Math.Sqrt(difX - difY);
+            }
+
+
         }
 
-        private double Perimetru(Point p1, Point p2, Point p3)
+        private double CalculeazaPerimetru(Point p1, Point p2, Point p3)
         {
 
             ///trebuie facuta impplementare
