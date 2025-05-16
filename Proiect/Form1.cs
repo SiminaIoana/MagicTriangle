@@ -24,7 +24,7 @@ namespace Proiect
         private int vP3 = 0;
 
         //lista de urmaritori
-        private List<ISubscriber> subscriber = new List<ISubscriber>();
+        private List<ISubscriber> subscribers = new List<ISubscriber>();
 
         /// <summary>
         /// Functie pentru initializarile componentelor necesare de pe interfata
@@ -32,7 +32,7 @@ namespace Proiect
         public Form1()
         {
             InitializeComponent();
-            //pictureBox1.MouseClick += new MouseEventHandler(pictureBox1_Click);
+            pictureBox1.MouseClick += new MouseEventHandler(pictureBox1_Click);
             //pictureBox1.Paint += new PaintEventHandler(pictureBox1_Paint);
             /////
         }
@@ -60,47 +60,47 @@ namespace Proiect
 
         public double GetArie(Point p1, Point p2, Point p3)
         {
-            return 2;
+            return Arie(p1, p2, p3);
         }
 
         public double GetPerimetru(Point p1, Point p2, Point p3)
         {
-            return 2;
+            return CalculeazaPerimetru(p1,p2,p3);
         }
 
         public double GetDistanta(Point p1, Point p2)
         {
-            return CalculeazDistanta(p1, p2);
+            return CalculeazaDistanta(p1, p2);
         }
 
-        public double GetCentruDeGreutate(Point p1, Point p2, Point p3)
+        public PointF GetCentruDeGreutate(Point p1, Point p2, Point p3)
         {
-            return 2;
+            return CentruDeGreutate(p1,p2,p3);
         }
 
-        public double GetCentruCercInscris(Point p1, Point p2, Point p3)
+        public PointF GetCentruCercInscris(Point p1, Point p2, Point p3)
         {
-            return 2;
+            return CentruCercInscris(p1,p2,p3);
         }
 
         public double GetRazaCercInscris(Point p1, Point p2, Point p3)
         {
-            return 2;
+            return RazaCercInscris(p1,p2,p3);
         }
 
-        public double GetCentruCercCircumscris(Point p1, Point p2, Point p3)
+        public PointF GetCentruCercCircumscris(Point p1, Point p2, Point p3)
         {
-            return 2;
+            return CentruCercCircumscris(p1,p2,p3);
         }
 
         public double GetRazaCercCircumscris(Point p1, Point p2, Point p3)
         {
-            return 2;
+            return RazaCercCircumscris(p1,p2,p3);
         }
 
-        public double GetOrtocentru(Point p1, Point p2, Point p3)
+        public PointF GetOrtocentru(Point p1, Point p2, Point p3)
         {
-            return 2;
+            return Ortocentru(p1,p2,p3);
         }
 
 
@@ -110,7 +110,7 @@ namespace Proiect
         /// <param name="subscriber"></param>
         public void AddSubscriber(ISubscriber subscriber)
         {
-
+            subscribers.Add(subscriber);
         }
 
         /// <summary>
@@ -119,6 +119,7 @@ namespace Proiect
         /// <param name="subscriber"></param>
         public void RemoveSubscriber(ISubscriber subscriber)
         {
+            subscribers.Remove(subscriber);
         }
         /// <summary>
         /// Functia implementata din IObservableObj
@@ -126,7 +127,10 @@ namespace Proiect
         /// <param name="subscriber"></param>
         public void Notify()
         {
-
+            foreach(ISubscriber s in subscribers)
+            {
+                s.Update(p1, p2, p3, nOfPoints);
+            }
         }
 
 
@@ -373,6 +377,8 @@ namespace Proiect
         private void DesenareTriunghi(Graphics g)
         {
             //de implementat
+
+
         }
 
         private void DesenareCercInscris(Graphics g, Point p1, Point p2, Point p3)

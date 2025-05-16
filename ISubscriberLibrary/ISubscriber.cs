@@ -12,6 +12,6 @@ namespace Proiect
     /// </summary>
     public interface ISubscriber
     {
-        // void Update(Point p1, Point p2, Point p3, int numberOfPoints);
+        void Update(Point p1, Point p2, Point p3, int numberOfPoints);
     }
 }
