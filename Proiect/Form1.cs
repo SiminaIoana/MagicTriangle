@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -110,10 +111,7 @@ namespace Proiect
             return RazaCercCircumscris(p1,p2,p3);
         }
 
-        public PointF GetOrtocentru(Point p1, Point p2, Point p3)
-        {
-            return Ortocentru(p1,p2,p3);
-        }
+      
 
 
         /// <summary>
@@ -163,7 +161,12 @@ namespace Proiect
         /// <param name="e"></param>
         private void buttonRescrierePunct1_Click(object sender, EventArgs e)
         {
-
+            if(vP1 == 0 || vP2 == 0 || vP3 == 0)
+            {
+                MessageBox.Show("Trebuie setate toate punctele!");
+            }
+            vP1 = 0;
+            nOfPoints = 2;
         }
 
         /// <summary>
@@ -173,6 +176,12 @@ namespace Proiect
         /// <param name="e"></param>
         private void buttonRescrierePunct3_Click(object sender, EventArgs e)
         {
+            if (vP1 == 0 || vP2 == 0 || vP3 == 0)
+            {
+                MessageBox.Show("Trebuie setate toate punctele!");
+            }
+            vP3 = 0;
+            nOfPoints = 2;
 
         }
 
@@ -217,7 +226,12 @@ namespace Proiect
         /// <param name="e"></param>
         private void buttonRescrierePunct2_Click(object sender, EventArgs e)
         {
-
+            if (vP1 == 0 || vP2 == 0 || vP3 == 0)
+            {
+                MessageBox.Show("Trebuie setate toate punctele!");
+            }
+            vP2 = 0;
+            nOfPoints = 2;
         }
 
 
@@ -400,27 +414,6 @@ namespace Proiect
             return (a * b * c) / (4 * aria);
         }
 
-        private PointF Ortocentru(Point p1, Point p2, Point p3)
-        {
-            float x1 = p1.X, y1 = p1.Y;
-            float x2 = p2.X, y2 = p2.Y;
-            float x3 = p3.X, y3 = p3.Y;
-
-            float a1 = x2 - x1;
-            float b1 = y2 - y1;
-            float a2 = x3 - x1;
-            float b2 = y3 - y1;
-
-            float c1 = a1 * (x1 + x2) + b1 * (y1 + y2);
-            float c2 = a2 * (x1 + x3) + b2 * (y1 + y3);
-
-            float d = 2 * (a1 * (y3 - y2) - b1 * (x3 - x2));
-
-            float x = (b2 * c1 - b1 * c2) / d;
-            float y = (a1 * c2 - a2 * c1) / d;
-
-            return new PointF(x, y);
-        }
 
         /// <summary>
         /// Functie ce va returna punctul de intersectie dintre o dreapta si perpendiculara dusa dintr-un punct pe acea dreapta
@@ -434,12 +427,28 @@ namespace Proiect
 
             //p --> varful din care pleaca inaltimea
             //startL -> punctul de start ar dreptei pe care pica inaltimea
-            float a = endL.Y - startL.Y;
-            float b = startL.X - endL.X;
-            float c = a * startL.X + b * startL.Y;
+            //vector AB
+            float ABx = endL.X - startL.X;
+            float ABy = endL.Y - startL.Y;
 
-            return new PointF(2, 3);
+            //vector AP
+            float APx = p.X - startL.X;
+            float APy = p.Y - startL.Y;
 
+            //produs scalat intre AP si AB
+            float produsScalar = APx * ABx + ABy * APy;
+
+            //lungimea lui AB la patrat
+            float lungime = ABx * ABx + ABy * ABy;
+
+            //scalarul t
+            float t = produsScalar / lungime;
+
+            //coordonatele puntului proiectat
+            float Hx = startL.X + t * ABx;
+            float Hy = startL.Y + t * ABy;
+
+            return new PointF(Hx, Hy);
         }
 
         private PointF GetIntersectie(Point p1, PointF p2, Point p3, Point p4)
@@ -490,6 +499,10 @@ namespace Proiect
                     if(checkBoxBisectoare.Checked)
                     {
                         DesenareBisectoare(g, p1, p2, p3);
+                    }
+                    if(checkBoxInaltimi.Checked)
+                    {
+                        DesenareInaltime(g, p1, p2, p3);
                     }
                 }
                 else
@@ -564,6 +577,22 @@ namespace Proiect
             Notify();
         }
 
+        private void buttonResetare_Click(object sender, EventArgs e)
+        {
+            p1 = Point.Empty;
+            p2 = Point.Empty;
+            p3 = Point.Empty;
+
+            vP1 = 0;
+            vP2 = 0;
+            vP3 = 0;
+
+            nOfPoints = 0;
+
+            pictureBox1.Invalidate();
+            Notify();
+        }
+
         private void DesenareMediana(Graphics g, Point p1, Point p2, Point p3)
         {
             //calcul mijloc pentru fiecare dreapta a triunghiului
@@ -587,7 +616,22 @@ namespace Proiect
 
         private void DesenareInaltime(Graphics g, Point p1, Point p2, Point p3)
         {
+            PointF H1 = PerpendicularaPunctDreapta(p1, p2, p3);
+            PointF H2 = PerpendicularaPunctDreapta(p2, p1, p3);
+            PointF H3 = PerpendicularaPunctDreapta(p3, p1, p2);
+
+            Pen p = new Pen(Color.Green, 1);
+            g.DrawLine(p, p1, new Point((int)H1.X, (int)H1.Y));
+            g.DrawLine(p, p2, new Point((int)H2.X, (int)H2.Y));
+            g.DrawLine(p, p3, new Point((int)H3.X, (int)H3.Y));
+
             
+            PointF ortocentru = GetIntersectie(p1, H1, p2, Point.Round(H2));
+
+            int diametru = 10;
+            g.FillEllipse(Brushes.DarkGreen, ortocentru.X - diametru / 2, ortocentru.Y - diametru / 2, diametru, diametru);
+
+
         }
 
 
