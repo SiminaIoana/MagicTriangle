@@ -32,9 +32,21 @@ namespace Proiect
         public Form1()
         {
             InitializeComponent();
+
+            //initializarea observatorului 
+            new TriangleSubscriber(this);
             pictureBox1.MouseClick += new MouseEventHandler(pictureBox1_Click);
-            //pictureBox1.Paint += new PaintEventHandler(pictureBox1_Paint);
-            /////
+            //adaugarea unui nou eveniment de desenare dupa click
+            pictureBox1.Paint += new PaintEventHandler(pictureBox1_Paint);
+
+
+            //eventul de bifare a casutelor
+            checkBoxBisectoare.CheckedChanged += new EventHandler(checkBoxBisectoare_CheckedChanged);
+            checkBoxMediane.CheckedChanged += new EventHandler(checkBoxMediane_CheckedChanged);
+            checkBoxInaltimi.CheckedChanged += new EventHandler(checkBoxInaltimi_CheckedChanged);
+            checkBoxCercInscris.CheckedChanged += new EventHandler(checkBoxCercInscris_CheckedChanged);
+            checkBoxCercCircumscris.CheckedChanged += new EventHandler(checkBoxCercCircumscris_CheckedChanged);
+
         }
 
 
@@ -216,9 +228,71 @@ namespace Proiect
         /// <param name="e"></param>
         private void pictureBox1_Click(object sender, EventArgs e)
         {
+            try
+            {
+                if (nOfPoints >= 3)
+                    return;
 
+                MouseEventArgs mouseE = (MouseEventArgs)e;
+
+                //pozitia relativa a punctului la evenimentul de click
+                Point punctRelativ = pictureBox1.PointToClient(Cursor.Position);
+
+                if(vP1==0)
+                {
+                    p1 = punctRelativ;
+                    vP1++;
+                    nOfPoints++;
+
+                }
+                else if(vP1==1)
+                {
+                    vP1++;
+                }
+                else if(vP2==0)
+                {
+                    p2 = punctRelativ;
+                    vP2++;
+                    nOfPoints++;
+
+                }
+                else if (vP2 == 1)
+                {
+                    vP2++;
+                }
+                else if (vP3 == 0)
+                {
+                    p3 = punctRelativ;
+                    vP3++;
+                    
+
+                }
+                else if (vP3 == 1)
+                {
+                    vP3++;
+                    nOfPoints++;
+                }
+
+                pictureBox1.Invalidate();
+                Notify();
+
+            }
+            catch(Exception ex)
+            {
+                //trebuie implementata o functie pentru ErrorHandle
+                throw new Exception("ttt",ex);
+            }
         }
 
+        /// <summary>
+        /// Functie pentru desenarea triunghiului pe interfata
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void pictureBox1_Paint(object sender, PaintEventArgs e)
+        {
+            DesenareTriunghi(e.Graphics);
+        }
 
 
         //////    FUNCTII PENTRU CALCULE ASUPRA TRIUNGHIULUI    ////////////////////////////////////////////////////////////////////////
@@ -370,13 +444,32 @@ namespace Proiect
         }
 
 
-
+        
 
         //////    FUNCTII PENTRU DESENAREA TRIUNGHIULUI / ELEMENTELOR SPECIFICE TRIUNGHILUI    //////////////////////////////////////////////
 
         private void DesenareTriunghi(Graphics g)
         {
-            //de implementat
+            try
+            {
+                if(nOfPoints>=3)
+                {
+                    Pen pen = new Pen(Color.BurlyWood, 3);
+                    g.DrawLine(pen, p1, p2);
+                    g.DrawLine(pen, p2, p3);
+                    g.DrawLine(pen, p3, p1);
+
+
+                }
+                else
+                {
+                    g.Clear(Color.White);
+                }
+            }
+            catch(Exception e)
+            {
+                throw new Exception("De implementat", e);
+            }
 
 
         }
@@ -396,6 +489,36 @@ namespace Proiect
             //de implementat
         }
 
+        private void checkBoxBisectoare_CheckedChanged(object sender, EventArgs e)
+        {
+            pictureBox1.Invalidate();
+            Notify();
+        }
+
+        private void checkBoxMediane_CheckedChanged(object sender, EventArgs e)
+        {
+            pictureBox1.Invalidate();
+            Notify();
+        }
+
+        private void checkBoxInaltimi_CheckedChanged(object sender, EventArgs e)
+        {
+            pictureBox1.Invalidate();
+            Notify();
+        }
+
+        private void checkBoxCercInscris_CheckedChanged(object sender, EventArgs e)
+        {
+            pictureBox1.Invalidate();
+            Notify();
+        }
+
+        private void checkBoxCercCircumscris_CheckedChanged(object sender, EventArgs e)
+        {
+            pictureBox1.Invalidate();
+            Notify();
+        }
+
         private void DesenareMediana(Graphics g, Point p1, Point p2, Point p3)
         {
             //de implementat
@@ -405,20 +528,6 @@ namespace Proiect
         {
             //de implementat
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
     }

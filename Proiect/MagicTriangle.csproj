@@ -33,6 +33,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="IObservableObj, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\IObservableObj\bin\Debug\IObservableObj.dll</HintPath>
+    </Reference>
+    <Reference Include="ISubscriberLibrary, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\IObservableObj\bin\Debug\ISubscriberLibrary.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -79,16 +87,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\IObservableObj\IObservableLibrary.csproj">
-      <Project>{e08946c0-25f4-4a13-a38a-8dcb592c6aad}</Project>
-      <Name>IObservableLibrary</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\ISubscriberLibrary\ISubscriberLibrary.csproj">
-      <Project>{3cf73c22-50aa-45eb-88d5-ba232f2839c3}</Project>
-      <Name>ISubscriberLibrary</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
