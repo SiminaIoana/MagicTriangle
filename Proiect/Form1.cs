@@ -431,16 +431,40 @@ namespace Proiect
         /// <returns></returns>
         private PointF PerpendicularaPunctDreapta(Point p, Point startL, Point endL)
         {
-            return new PointF(2, 3);
-            //trebuie facuta implementare;
+
             //p --> varful din care pleaca inaltimea
             //startL -> punctul de start ar dreptei pe care pica inaltimea
+            float a = endL.Y - startL.Y;
+            float b = startL.X - endL.X;
+            float c = a * startL.X + b * startL.Y;
+
+            return new PointF(2, 3);
+
         }
 
-        private PointF GetIntersectie(Point p1, Point p2, Point p3, Point p4)
+        private PointF GetIntersectie(Point p1, PointF p2, Point p3, Point p4)
         {
-            return new PointF(2, 3);
-            //trebuie facuta implementare;
+            //coeficienti pante
+            float a1 = p2.Y - p1.Y;
+            float b1 = p1.X - p2.X;
+            float c1 = a1 * p1.X + b1 * p1.Y;
+
+            float a2 = p4.Y - p3.Y;
+            float b2 = p3.X - p4.X;
+            float c2 = a2 * p3.X + b2 * p3.Y;
+
+            float determinant = a1 * b2 - a2 * b1;
+
+            if(determinant==0)
+            {
+                throw new ArgumentException("Liniile nu se intersecteaza!");
+            }
+
+            float x = (b2 * c1 - b1 * c2) / determinant;
+            float y = (a1 * c2 - a2 * c1) / determinant;
+
+
+            return new PointF(x, y);
         }
 
 
@@ -454,12 +478,19 @@ namespace Proiect
             {
                 if(nOfPoints>=3)
                 {
-                    Pen pen = new Pen(Color.BurlyWood, 3);
+                    Pen pen = new Pen(Color.Black, 3);
                     g.DrawLine(pen, p1, p2);
                     g.DrawLine(pen, p2, p3);
                     g.DrawLine(pen, p3, p1);
 
-
+                    if(checkBoxMediane.Checked)
+                    {
+                        DesenareMediana(g, p1, p2, p3);
+                    }
+                    if(checkBoxBisectoare.Checked)
+                    {
+                        DesenareBisectoare(g, p1, p2, p3);
+                    }
                 }
                 else
                 {
@@ -486,7 +517,21 @@ namespace Proiect
 
         private void DesenareBisectoare(Graphics g, Point p1, Point p2, Point p3)
         {
-            //de implementat
+            PointF centruInscris = CentruCercInscris(p1, p2, p3);
+
+            PointF i1 = GetIntersectie(p1, centruInscris, p2, p3);
+            PointF i2 = GetIntersectie(p2, centruInscris, p1, p3);
+            PointF i3 = GetIntersectie(p3, centruInscris, p1, p2);
+
+            Pen p = new Pen(Color.LightSkyBlue, 1);
+            g.DrawLine(p, p1, i1);
+            g.DrawLine(p, p2, i2);
+            g.DrawLine(p, p3, i3);
+
+            //desenare centru
+            int diametru = 10;
+            g.FillEllipse(Brushes.DarkBlue, centruInscris.X - diametru / 2, centruInscris.Y - diametru / 2, diametru, diametru);
+
         }
 
         private void checkBoxBisectoare_CheckedChanged(object sender, EventArgs e)
@@ -521,12 +566,28 @@ namespace Proiect
 
         private void DesenareMediana(Graphics g, Point p1, Point p2, Point p3)
         {
-            //de implementat
+            //calcul mijloc pentru fiecare dreapta a triunghiului
+            Point m1 = new Point((p2.X + p3.X) / 2, (p2.Y + p3.Y) / 2);
+            Point m2 = new Point((p1.X + p3.X) / 2, (p1.Y + p3.Y) / 2);
+            Point m3 = new Point((p1.X + p2.X) / 2, (p1.Y + p2.Y) / 2);
+
+            Pen p = new Pen(Color.Pink, 1);
+            //desenare mediane in plan
+            g.DrawLine(p, p1, m1);
+            g.DrawLine(p, p2, m2);
+            g.DrawLine(p, p3, m3);
+
+            //intersectia medianelor este centrul de greutate
+            PointF centruGreutate = CentruDeGreutate(p1, p2, p3);
+
+            int diametru = 10;
+            g.FillEllipse(Brushes.DeepPink, centruGreutate.X - diametru / 2, centruGreutate.Y - diametru / 2, diametru, diametru);
+
         }
 
         private void DesenareInaltime(Graphics g, Point p1, Point p2, Point p3)
         {
-            //de implementat
+            
         }
 
 
