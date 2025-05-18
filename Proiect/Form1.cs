@@ -306,6 +306,14 @@ namespace Proiect
         private void pictureBox1_Paint(object sender, PaintEventArgs e)
         {
             DesenareTriunghi(e.Graphics);
+
+            if(nOfPoints == 3)
+            {
+                if (checkBoxCercInscris.Checked)
+                    DesenareCercInscris(e.Graphics, p1, p2, p3);
+                if (checkBoxCercCircumscris.Checked)
+                    DesenareCerCircumscris(e.Graphics, p1, p2, p3);
+            }
         }
 
 
@@ -385,18 +393,23 @@ namespace Proiect
 
         private PointF CentruCercCircumscris(Point p1, Point p2, Point p3)
         {
-            double a = CalculeazaDistanta(p2, p3);
-            double b = CalculeazaDistanta(p1, p3);
-            double c = CalculeazaDistanta(p1, p2);
+            float x1 = p1.X, y1 = p1.Y;
+            float x2 = p2.X, y2 = p2.Y;
+            float x3 = p3.X, y3 = p3.Y;
 
-            double a2 = a * a;
-            double b2 = b * b;
-            double c2 = c * c;
+            float d = 2 * (x1 * (y2 - y3) +
+                           x2 * (y3 - y1) +
+                           x3 * (y1 - y2));
 
-            double x = (a2 * p1.X + b2 * p2.X + c2 * p3.X) / (a2 + b2 + c2);
-            double y = (a2 * p1.Y + b2 * p2.Y + c2 * p3.Y) / (a2 + b2 + c2);
+            float ux = ((x1 * x1 + y1 * y1) * (y2 - y3) +
+                        (x2 * x2 + y2 * y2) * (y3 - y1) +
+                        (x3 * x3 + y3 * y3) * (y1 - y2)) / d;
 
-            return new PointF((float)x, (float)y);
+            float uy = ((x1 * x1 + y1 * y1) * (x3 - x2) +
+                        (x2 * x2 + y2 * y2) * (x1 - x3) +
+                        (x3 * x3 + y3 * y3) * (x2 - x1)) / d;
+
+            return new PointF(ux, uy);
         }
 
         private double RazaCercCircumscris(Point p1, Point p2, Point p3) //la fel, double in loc de PointF idk
@@ -520,12 +533,22 @@ namespace Proiect
 
         private void DesenareCercInscris(Graphics g, Point p1, Point p2, Point p3)
         {
-            //de implementat
+            PointF centru = GetCentruCercInscris(p1, p2, p3);
+            float raza = (float)GetRazaCercInscris(p1, p2, p3);
+            float diametru = 2 * raza;
+            float x = centru.X - raza;
+            float y = centru.Y - raza;
+            g.DrawEllipse(Pens.BlueViolet, x, y, diametru, diametru);
         }
 
         private void DesenareCerCircumscris(Graphics g, Point p1, Point p2, Point p3)
         {
-            //de implementat
+            PointF centru = GetCentruCercCircumscris(p1, p2, p3);
+            float raza = (float)GetRazaCercCircumscris(p1, p2, p3);
+            float diametru = 2 * raza;
+            float x = centru.X - raza;
+            float y = centru.Y - raza;
+            g.DrawEllipse(Pens.Red, x, y, diametru, diametru);
         }
 
         private void DesenareBisectoare(Graphics g, Point p1, Point p2, Point p3)
