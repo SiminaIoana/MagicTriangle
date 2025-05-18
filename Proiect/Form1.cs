@@ -393,21 +393,23 @@ namespace Proiect
 
         private PointF CentruCercCircumscris(Point p1, Point p2, Point p3)
         {
+            // coordonatele celor 3 puncte
             float x1 = p1.X, y1 = p1.Y;
             float x2 = p2.X, y2 = p2.Y;
             float x3 = p3.X, y3 = p3.Y;
 
-            float d = 2 * (x1 * (y2 - y3) +
-                           x2 * (y3 - y1) +
-                           x3 * (y1 - y2));
+            // calculam determinantul sistemului dat de ecuatiile celor 3 mediatoare
+            float d = 2 * (x1 * (y2 - y3) + x2 * (y3 - y1) + x3 * (y1 - y2));
 
-            float ux = ((x1 * x1 + y1 * y1) * (y2 - y3) +
-                        (x2 * x2 + y2 * y2) * (y3 - y1) +
-                        (x3 * x3 + y3 * y3) * (y1 - y2)) / d;
+            // coordonata X a punctului de intersectie
+            float ux = ((x1 * x1 + y1 * y1) * (y2 - y3) + 
+                (x2 * x2 + y2 * y2) * (y3 - y1) +
+                (x3 * x3 + y3 * y3) * (y1 - y2)) / d;
 
+            // coordonata Y a punctului de intersectie
             float uy = ((x1 * x1 + y1 * y1) * (x3 - x2) +
-                        (x2 * x2 + y2 * y2) * (x1 - x3) +
-                        (x3 * x3 + y3 * y3) * (x2 - x1)) / d;
+                (x2 * x2 + y2 * y2) * (x1 - x3) +
+                (x3 * x3 + y3 * y3) * (x2 - x1)) / d;
 
             return new PointF(ux, uy);
         }
