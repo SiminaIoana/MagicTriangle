@@ -41,7 +41,7 @@ namespace Proiect
             pictureBox1.Paint += new PaintEventHandler(pictureBox1_Paint);
 
 
-            //eventul de bifare a casutelor
+            //evenimentul de bifare al casutelor
             checkBoxBisectoare.CheckedChanged += new EventHandler(checkBoxBisectoare_CheckedChanged);
             checkBoxMediane.CheckedChanged += new EventHandler(checkBoxMediane_CheckedChanged);
             checkBoxInaltimi.CheckedChanged += new EventHandler(checkBoxInaltimi_CheckedChanged);
@@ -337,7 +337,7 @@ namespace Proiect
             double l2 = CalculeazaDistanta(p2, p3);
             double l3 = CalculeazaDistanta(p3, p1);
 
-            return l1 + l2 + l2;
+            return l1 + l2 + l3;
         }
 
         private double Arie(Point p1, Point p2, Point p3)
