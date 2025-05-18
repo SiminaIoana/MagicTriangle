@@ -71,41 +71,96 @@ namespace Proiect
 
         public int GetV3() => vP3;
 
+        /// <summary>
+        /// Returnează aria triunghiului definit de cele trei puncte date.
+        /// </summary>
+        /// /// <param name="p1">Primul punct al triunghiului.</param>
+        /// <param name="p2">Al doilea punct al triunghiului.</param>
+        /// <param name="p3">Al treilea punct al triunghiului.</param>
+        /// <returns>Aria triunghiului.</returns>
         public double GetArie(Point p1, Point p2, Point p3)
         {
             return Arie(p1, p2, p3);
         }
 
+        /// <summary>
+        /// Returnează perimetrul triunghiului definit de cele trei puncte date.
+        /// </summary>
+        /// /// /// <param name="p1">Primul punct al triunghiului.</param>
+        /// <param name="p2">Al doilea punct al triunghiului.</param>
+        /// <param name="p3">Al treilea punct al triunghiului.</param>
+        /// <returns>Perimetrul triunghiului.</returns>
         public double GetPerimetru(Point p1, Point p2, Point p3)
         {
             return CalculeazaPerimetru(p1,p2,p3);
         }
 
+        /// <summary>
+        /// Returnează distanța dintre cele două puncte date.
+        /// </summary>
+        /// <param name="p1">Primul punct.</param>
+        /// <param name="p2">Al doilea punct.</param>
+        /// <returns>Distanța dintre p1 și p2.</returns>
         public double GetDistanta(Point p1, Point p2)
         {
             return CalculeazaDistanta(p1, p2);
         }
 
+        /// <summary>
+        /// Returnează centrul de greutate triunghiului definit de cele trei puncte.
+        /// </summary>
+        /// <param name="p1">Primul punct al triunghiului.</param>
+        /// <param name="p2">Al doilea punct al triunghiului.</param>
+        /// <param name="p3">Al treilea punct al triunghiului.</param>
+        /// <returns>Punctul care reprezintă centrul de greutate.</returns>
         public PointF GetCentruDeGreutate(Point p1, Point p2, Point p3)
         {
             return CentruDeGreutate(p1,p2,p3);
         }
 
+        /// <summary>
+        /// Returnează centrul cercului înscris în triunghiul definit de cele trei puncte.
+        /// </summary>
+        /// <param name="p1">Primul vârf al triunghiului.</param>
+        /// <param name="p2">Al doilea vârf al triunghiului.</param>
+        /// <param name="p3">Al treilea vârf al triunghiului.</param>
+        /// <returns>Punctul care reprezintă centrul cercului înscris.</returns>
         public PointF GetCentruCercInscris(Point p1, Point p2, Point p3)
         {
             return CentruCercInscris(p1,p2,p3);
         }
 
+        /// <summary>
+        /// Returnează raza cercului înscris în triunghiul format de cele trei puncte date.
+        /// </summary>
+        /// <param name="p1">Primul vârf al triunghiului.</param>
+        /// <param name="p2">Al doilea vârf al triunghiului.</param>
+        /// <param name="p3">Al treilea vârf al triunghiului.</param>
+        /// <returns>Raza cercului înscris.</returns>
         public double GetRazaCercInscris(Point p1, Point p2, Point p3)
         {
             return RazaCercInscris(p1,p2,p3);
         }
 
+        /// <summary>
+        /// Returnează centrul cercului circumscris triunghiului definit de cele trei puncte date.
+        /// </summary>
+        /// <param name="p1">Primul vârf al triunghiului.</param>
+        /// <param name="p2">Al doilea vârf al triunghiului.</param>
+        /// <param name="p3">Al treilea vârf al triunghiului.</param>
+        /// <returns>Punctul ce reprezintă centrul cercului circumscris.</returns>
         public PointF GetCentruCercCircumscris(Point p1, Point p2, Point p3)
         {
             return CentruCercCircumscris(p1,p2,p3);
         }
 
+        /// <summary>
+        /// Returnează raza cercului circumscris triunghiului definit de cele trei puncte date.
+        /// </summary>
+        /// <param name="p1">Primul vârf al triunghiului.</param>
+        /// <param name="p2">Al doilea vârf al triunghiului.</param>
+        /// <param name="p3">Al treilea vârf al triunghiului.</param>
+        /// <returns>Raza cercului circumscris.</returns>
         public double GetRazaCercCircumscris(Point p1, Point p2, Point p3)
         {
             return RazaCercCircumscris(p1,p2,p3);
@@ -340,6 +395,14 @@ namespace Proiect
         //////    FUNCTII PENTRU CALCULE ASUPRA TRIUNGHIULUI    ////////////////////////////////////////////////////////////////////////
 
 
+        /// <summary>
+        /// Calculează distanța dintre două puncte în plan.
+        /// Aruncă excepție dacă punctele sunt identice.
+        /// </summary>
+        /// <param name="p1">Primul punct</param>
+        /// <param name="p2">Al doilea punct</param>
+        /// <returns>Distanța dintre p1 și p2</returns>
+        /// <exception cref="ArgumentException">Dacă p1 și p2 sunt identice</exception>
         private double CalculeazaDistanta(Point p1, Point p2)
         {
             if (p1 == p2)
@@ -352,12 +415,17 @@ namespace Proiect
                 double y1 = p1.Y, y2 = p2.Y;
                 double difX = Math.Pow((x1 - x2), 2);
                 double difY = Math.Pow((y1 - y2), 2);
-                return Math.Sqrt(difX + difY); //hei, eu zic ca e cu + formula (tudor)
+                return Math.Sqrt(difX + difY);
             }
-
-
         }
 
+        /// <summary>
+        /// Calculează perimetrul triunghiului definit de cele trei puncte date.
+        /// </summary>
+        /// <param name="p1">Primul vârf al triunghiului.</param>
+        /// <param name="p2">Al doilea vârf al triunghiului.</param>
+        /// <param name="p3">Al treilea vârf al triunghiului.</param>
+        /// <returns>Suma lungimilor laturilor triunghiului.</returns>
         private double CalculeazaPerimetru(Point p1, Point p2, Point p3)
         {
 
@@ -368,6 +436,13 @@ namespace Proiect
             return l1 + l2 + l3;
         }
 
+        /// <summary>
+        /// Calculează aria triunghiului definit de cele trei puncte date folosind formula lui Heron.
+        /// </summary>
+        /// <param name="p1">Primul vârf al triunghiului.</param>
+        /// <param name="p2">Al doilea vârf al triunghiului.</param>
+        /// <param name="p3">Al treilea vârf al triunghiului.</param>
+        /// <returns>Aria triunghiului.</returns>
         private double Arie(Point p1, Point p2, Point p3)
         {
             double l1 = CalculeazaDistanta(p1, p2);
@@ -376,9 +451,16 @@ namespace Proiect
 
             double p = (l1 + l2 + l3) / 2;
 
-            return Math.Sqrt(p * (p - l1) * (p - l2) * (p - l3)); //formula lui Heron
+            return Math.Sqrt(p * (p - l1) * (p - l2) * (p - l3));
         }
 
+        /// <summary>
+        /// Calculează centrul de greutate al triunghiului definit de cele trei puncte
+        /// </summary>
+        /// <param name="p1">Primul vârf al triunghiului</param>
+        /// <param name="p2">Al doilea vârf al triunghiului</param>
+        /// <param name="p3">Al treilea vârf al triunghiului</param>
+        /// <returns>Coordonatele centrului de greutate al triunghiului</returns>
         private PointF CentruDeGreutate(Point p1, Point p2, Point p3)
         {
             float x = (p1.X + p2.X + p3.X) / 3.0f;
@@ -388,6 +470,13 @@ namespace Proiect
         }
 
 
+        /// <summary>
+        /// Calculează centrul cercului înscris în triunghiul definit de cele trei puncte
+        /// </summary>
+        /// <param name="p1">Primul vârf al triunghiului</param>
+        /// <param name="p2">Al doilea vârf al triunghiului</param>
+        /// <param name="p3">Al treilea vârf al triunghiului</param>
+        /// <returns>Coordonatele centrului cercului înscris</returns>
         private PointF CentruCercInscris(Point p1, Point p2, Point p3)
         {
             double a = CalculeazaDistanta(p2, p3);
@@ -402,7 +491,14 @@ namespace Proiect
             return new PointF(x, y);
         }
 
-        private double RazaCercInscris(Point p1, Point p2, Point p3) //aici era de tip PointF da zic ca ar trb double nu??
+        /// <summary>
+        /// Calculează raza cercului înscris în triunghiul definit de cele trei puncte
+        /// </summary>
+        /// <param name="p1">Primul vârf al triunghiului</param>
+        /// <param name="p2">Al doilea vârf al triunghiului</param>
+        /// <param name="p3">Al treilea vârf al triunghiului</param>
+        /// <returns>Raza cercului înscris</returns>
+        private double RazaCercInscris(Point p1, Point p2, Point p3)
         {
             double arie = Arie(p1, p2, p3);
             double s = CalculeazaPerimetru(p1, p2, p3) / 2;
@@ -410,6 +506,14 @@ namespace Proiect
             return arie / s;
 
         }
+
+        /// <summary>
+        /// Calculează centrul cercului circumscris triunghiului definit de cele trei puncte
+        /// </summary>
+        /// <param name="p1">Primul vârf al triunghiului</param>
+        /// <param name="p2">Al doilea vârf al triunghiului</param>
+        /// <param name="p3">Al treilea vârf al triunghiului</param>
+        /// <returns>Punctul cu coordonatele centrului cercului circumscris</returns>
 
         private PointF CentruCercCircumscris(Point p1, Point p2, Point p3)
         {
@@ -434,7 +538,15 @@ namespace Proiect
             return new PointF(ux, uy);
         }
 
-        private double RazaCercCircumscris(Point p1, Point p2, Point p3) //la fel, double in loc de PointF idk
+        /// <summary>
+        /// Calculează raza cercului circumscris triunghiului definit de cele trei puncte
+        /// </summary>
+        /// <param name="p1">Primul vârf al triunghiului</param>
+        /// <param name="p2">Al doilea vârf al triunghiului</param>
+        /// <param name="p3">Al treilea vârf al triunghiului</param>
+        /// <returns>Raza cercului circumscris</returns>
+        /// <exception cref="ArgumentException">Punctele sunt coliniare, deci cercul circumscris nu există.</exception>
+        private double RazaCercCircumscris(Point p1, Point p2, Point p3)
         {
             double a = CalculeazaDistanta(p1, p2);
             double b = CalculeazaDistanta(p2, p3);
@@ -486,6 +598,16 @@ namespace Proiect
             return new PointF(Hx, Hy);
         }
 
+        /// <summary>
+        /// Calculează punctul de intersecție dintre două drepte definite de două perechi de puncte.
+        /// </summary>
+        /// <param name="p1">Primul punct pe prima dreaptă.</param>
+        /// <param name="p2">Al doilea punct pe prima dreaptă.</param>
+        /// <param name="p3">Primul punct pe a doua dreaptă.</param>
+        /// <param name="p4">Al doilea punct pe a doua dreaptă.</param>
+        /// <returns>Punctul de intersecție al celor două drepte</returns>
+        /// <exception cref="ArgumentException">Dacă dreptele sunt paralele și nu se intersectează</exception>
+
         private PointF GetIntersectie(Point p1, PointF p2, Point p3, Point p4)
         {
             //coeficienti pante
@@ -512,9 +634,17 @@ namespace Proiect
         }
 
 
-        
+
 
         //////    FUNCTII PENTRU DESENAREA TRIUNGHIULUI / ELEMENTELOR SPECIFICE TRIUNGHILUI    //////////////////////////////////////////////
+
+
+        /// <summary>
+        /// Desenează triunghiul format de cele trei puncte p1, p2 și p3
+        /// Desenează medianele, bisectoarele și înălțimile triunghiului dacă sunt bifate opțiunile corespunzătoare
+        /// </summary>
+        /// <param name="g">Obiectul Graphics pe care se face desenul.</param>
+        /// <exception cref="Exception">Aruncă excepția cu un mesaj specific în cazul unei erori.</exception>
 
         private void DesenareTriunghi(Graphics g)
         {
@@ -553,6 +683,13 @@ namespace Proiect
 
         }
 
+        /// <summary>
+        /// Desenează cercul înscris în triunghiul definit de punctele p1, p2 și p3, cu culoarea BlueViolet
+        /// </summary>
+        /// <param name="g">Obiectul Graphics pe care se face desenul.</param>
+        /// <param name="p1">Primul punct al triunghiului.</param>
+        /// <param name="p2">Al doilea punct al triunghiului.</param>
+        /// <param name="p3">Al treilea punct al triunghiului.</param>
         private void DesenareCercInscris(Graphics g, Point p1, Point p2, Point p3)
         {
             PointF centru = GetCentruCercInscris(p1, p2, p3);
@@ -563,6 +700,13 @@ namespace Proiect
             g.DrawEllipse(Pens.BlueViolet, x, y, diametru, diametru);
         }
 
+        /// <summary>
+        /// Desenează cercul circumscris triunghiului definit de punctele p1, p2 și p3, cu culoarea roșie
+        /// </summary>
+        /// <param name="g">Obiectul Graphics pe care se face desenul.</param>
+        /// <param name="p1">Primul punct al triunghiului.</param>
+        /// <param name="p2">Al doilea punct al triunghiului.</param>
+        /// <param name="p3">Al treilea punct al triunghiului.</param>
         private void DesenareCerCircumscris(Graphics g, Point p1, Point p2, Point p3)
         {
             PointF centru = GetCentruCercCircumscris(p1, p2, p3);
@@ -573,6 +717,13 @@ namespace Proiect
             g.DrawEllipse(Pens.Red, x, y, diametru, diametru);
         }
 
+        /// <summary>
+        /// Desenează bisectoarele triunghiului format din punctele p1, p2 și p3
+        /// </summary>
+        /// <param name="g">Obiectul Graphics pe care se face desenarea.</param>
+        /// <param name="p1">Primul vârf al triunghiului.</param>
+        /// <param name="p2">Al doilea vârf al triunghiului.</param>
+        /// <param name="p3">Al treilea vârf al triunghiului.</param>
         private void DesenareBisectoare(Graphics g, Point p1, Point p2, Point p3)
         {
             PointF centruInscris = CentruCercInscris(p1, p2, p3);
@@ -592,36 +743,66 @@ namespace Proiect
 
         }
 
+        /// <summary>
+        /// Eveniment care se declanșează când se schimbă starea checkbox-ului pentru afișarea bisectoarelor
+        /// </summary>
+        /// <param name="sender">Obiectul care a generat evenimentul</param>
+        /// <param name="e">Datele evenimentului</param>
         private void checkBoxBisectoare_CheckedChanged(object sender, EventArgs e)
         {
             pictureBox1.Invalidate();
             Notify();
         }
 
+        /// <summary>
+        /// Eveniment care se declanșează când se schimbă starea checkbox-ului pentru afișarea medianelor
+        /// </summary>
+        /// <param name="sender">Obiectul care a generat evenimentul</param>
+        /// <param name="e">Datele evenimentului</param>
         private void checkBoxMediane_CheckedChanged(object sender, EventArgs e)
         {
             pictureBox1.Invalidate();
             Notify();
         }
 
+        /// <summary>
+        /// Eveniment care se declanșează când se schimbă starea checkbox-ului pentru afișarea înălțimilor
+        /// </summary>
+        /// <param name="sender">Obiectul care a generat evenimentul</param>
+        /// <param name="e">Datele evenimentului</param>
         private void checkBoxInaltimi_CheckedChanged(object sender, EventArgs e)
         {
             pictureBox1.Invalidate();
             Notify();
         }
 
+        /// <summary>
+        /// Eveniment care se declanșează când se schimbă starea checkbox-ului pentru afișarea cercului înscris
+        /// </summary>
+        /// <param name="sender">Obiectul care a generat evenimentul</param>
+        /// <param name="e">Datele evenimentului</param>
         private void checkBoxCercInscris_CheckedChanged(object sender, EventArgs e)
         {
             pictureBox1.Invalidate();
             Notify();
         }
 
+        /// <summary>
+        /// Eveniment care se declanșează când se schimbă starea checkbox-ului pentru afișarea cercului circumscris
+        /// </summary>
+        /// <param name="sender">Obiectul care a generat evenimentul</param>
+        /// <param name="e">Datele evenimentului</param>
         private void checkBoxCercCircumscris_CheckedChanged(object sender, EventArgs e)
         {
             pictureBox1.Invalidate();
             Notify();
         }
 
+        /// <summary>
+        /// Resetează toate punctele și variabilele legate de triunghi la valorile inițiale
+        /// </summary>
+        /// <param name="sender">Obiectul care a declanșat evenimentul</param>
+        /// <param name="e">Datele evenimentului.</param>
         private void buttonResetare_Click(object sender, EventArgs e)
         {
             p1 = Point.Empty;
@@ -638,6 +819,13 @@ namespace Proiect
             Notify();
         }
 
+        /// <summary>
+        /// Desenează medianele triunghiului definit de punctele p1, p2 și p3.
+        /// </summary>
+        /// <param name="g">Obiectul Graphics pe care se face desenarea.</param>
+        /// <param name="p1">Primul vârf al triunghiului.</param>
+        /// <param name="p2">Al doilea vârf al triunghiului.</param>
+        /// <param name="p3">Al treilea vârf al triunghiului.</param>
         private void DesenareMediana(Graphics g, Point p1, Point p2, Point p3)
         {
             //calcul mijloc pentru fiecare dreapta a triunghiului
@@ -659,6 +847,14 @@ namespace Proiect
 
         }
 
+
+        /// <summary>
+        /// Desenează înălțimile triunghiului format de punctele p1, p2 și p3,
+        /// </summary>
+        /// <param name="g">Obiectul Graphics pe care se face desenarea.</param>
+        /// <param name="p1">Primul vârf al triunghiului.</param>
+        /// <param name="p2">Al doilea vârf al triunghiului.</param>
+        /// <param name="p3">Al treilea vârf al triunghiului.</param>
         private void DesenareInaltime(Graphics g, Point p1, Point p2, Point p3)
         {
             PointF H1 = PerpendicularaPunctDreapta(p1, p2, p3);
