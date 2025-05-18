@@ -47,9 +47,9 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(33, 191);
+            this.pictureBox1.Location = new System.Drawing.Point(33, 112);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(738, 200);
+            this.pictureBox1.Size = new System.Drawing.Size(1207, 491);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
@@ -57,7 +57,7 @@
             // checkBoxBisectoare
             // 
             this.checkBoxBisectoare.AutoSize = true;
-            this.checkBoxBisectoare.Location = new System.Drawing.Point(477, 29);
+            this.checkBoxBisectoare.Location = new System.Drawing.Point(776, 27);
             this.checkBoxBisectoare.Name = "checkBoxBisectoare";
             this.checkBoxBisectoare.Size = new System.Drawing.Size(76, 17);
             this.checkBoxBisectoare.TabIndex = 1;
@@ -68,7 +68,7 @@
             // checkBoxMediane
             // 
             this.checkBoxMediane.AutoSize = true;
-            this.checkBoxMediane.Location = new System.Drawing.Point(477, 86);
+            this.checkBoxMediane.Location = new System.Drawing.Point(776, 72);
             this.checkBoxMediane.Name = "checkBoxMediane";
             this.checkBoxMediane.Size = new System.Drawing.Size(67, 17);
             this.checkBoxMediane.TabIndex = 2;
@@ -79,7 +79,7 @@
             // checkBoxInaltimi
             // 
             this.checkBoxInaltimi.AutoSize = true;
-            this.checkBoxInaltimi.Location = new System.Drawing.Point(477, 148);
+            this.checkBoxInaltimi.Location = new System.Drawing.Point(893, 27);
             this.checkBoxInaltimi.Name = "checkBoxInaltimi";
             this.checkBoxInaltimi.Size = new System.Drawing.Size(58, 17);
             this.checkBoxInaltimi.TabIndex = 3;
@@ -90,7 +90,7 @@
             // checkBoxCercCircumscris
             // 
             this.checkBoxCercCircumscris.AutoSize = true;
-            this.checkBoxCercCircumscris.Location = new System.Drawing.Point(626, 86);
+            this.checkBoxCercCircumscris.Location = new System.Drawing.Point(1003, 25);
             this.checkBoxCercCircumscris.Name = "checkBoxCercCircumscris";
             this.checkBoxCercCircumscris.Size = new System.Drawing.Size(103, 17);
             this.checkBoxCercCircumscris.TabIndex = 4;
@@ -101,7 +101,7 @@
             // checkBoxCercInscris
             // 
             this.checkBoxCercInscris.AutoSize = true;
-            this.checkBoxCercInscris.Location = new System.Drawing.Point(626, 31);
+            this.checkBoxCercInscris.Location = new System.Drawing.Point(893, 72);
             this.checkBoxCercInscris.Name = "checkBoxCercInscris";
             this.checkBoxCercInscris.Size = new System.Drawing.Size(80, 17);
             this.checkBoxCercInscris.TabIndex = 5;
@@ -121,7 +121,7 @@
             // 
             // buttonRescrierePunct2
             // 
-            this.buttonRescrierePunct2.Location = new System.Drawing.Point(33, 63);
+            this.buttonRescrierePunct2.Location = new System.Drawing.Point(170, 25);
             this.buttonRescrierePunct2.Name = "buttonRescrierePunct2";
             this.buttonRescrierePunct2.Size = new System.Drawing.Size(112, 23);
             this.buttonRescrierePunct2.TabIndex = 7;
@@ -131,7 +131,7 @@
             // 
             // buttonRescrierePunct3
             // 
-            this.buttonRescrierePunct3.Location = new System.Drawing.Point(33, 104);
+            this.buttonRescrierePunct3.Location = new System.Drawing.Point(304, 25);
             this.buttonRescrierePunct3.Name = "buttonRescrierePunct3";
             this.buttonRescrierePunct3.Size = new System.Drawing.Size(112, 23);
             this.buttonRescrierePunct3.TabIndex = 8;
@@ -141,7 +141,7 @@
             // 
             // buttonAfisareValori
             // 
-            this.buttonAfisareValori.Location = new System.Drawing.Point(33, 148);
+            this.buttonAfisareValori.Location = new System.Drawing.Point(304, 72);
             this.buttonAfisareValori.Name = "buttonAfisareValori";
             this.buttonAfisareValori.Size = new System.Drawing.Size(112, 23);
             this.buttonAfisareValori.TabIndex = 9;
@@ -151,16 +151,16 @@
             // 
             // richTextBoxCalculate
             // 
-            this.richTextBoxCalculate.Location = new System.Drawing.Point(167, 25);
+            this.richTextBoxCalculate.Location = new System.Drawing.Point(433, 25);
             this.richTextBoxCalculate.Name = "richTextBoxCalculate";
-            this.richTextBoxCalculate.Size = new System.Drawing.Size(278, 146);
+            this.richTextBoxCalculate.Size = new System.Drawing.Size(273, 81);
             this.richTextBoxCalculate.TabIndex = 11;
             this.richTextBoxCalculate.Text = "";
             this.richTextBoxCalculate.TextChanged += new System.EventHandler(this.richTextBoxCalculate_TextChanged);
             // 
             // buttonHelp
             // 
-            this.buttonHelp.Location = new System.Drawing.Point(600, 415);
+            this.buttonHelp.Location = new System.Drawing.Point(1056, 624);
             this.buttonHelp.Name = "buttonHelp";
             this.buttonHelp.Size = new System.Drawing.Size(75, 23);
             this.buttonHelp.TabIndex = 12;
@@ -170,7 +170,7 @@
             // 
             // buttonExit
             // 
-            this.buttonExit.Location = new System.Drawing.Point(696, 415);
+            this.buttonExit.Location = new System.Drawing.Point(1165, 624);
             this.buttonExit.Name = "buttonExit";
             this.buttonExit.Size = new System.Drawing.Size(75, 23);
             this.buttonExit.TabIndex = 13;
@@ -180,7 +180,7 @@
             // 
             // buttonResetare
             // 
-            this.buttonResetare.Location = new System.Drawing.Point(617, 144);
+            this.buttonResetare.Location = new System.Drawing.Point(33, 72);
             this.buttonResetare.Name = "buttonResetare";
             this.buttonResetare.Size = new System.Drawing.Size(112, 23);
             this.buttonResetare.TabIndex = 14;
@@ -192,7 +192,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1268, 659);
             this.Controls.Add(this.buttonResetare);
             this.Controls.Add(this.buttonExit);
             this.Controls.Add(this.buttonHelp);

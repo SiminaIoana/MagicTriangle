@@ -214,7 +214,27 @@ namespace Proiect
         /// <param name="e"></param>
         private void buttonAfisareValori_Click(object sender, EventArgs e)
         {
+            if (nOfPoints < 3)
+            {
+                //de facut functie de erori
+               // FunctieErori(new Exception("Introduceti mai intai toate cele 3 punte!!"));
+                return;
+            }
+            try
+            {
+                double arie = Arie(p1, p2, p3);
+                double perimetru = CalculeazaPerimetru(p1, p2, p3);
+                PointF centruInscris =CentruCercInscris(p1, p2, p3);
+                PointF centruCircumscris = CentruCercCircumscris(p1, p2, p3);
 
+                richTextBoxCalculate.Text = string.Format("Aria: {0}\nPerimetrul: {1}\nCentru inscris:  X: {2}, Y: {3} \nCentru circumscris:  X: {4}, Y: {5}", arie, perimetru, centruInscris.X, centruInscris.Y, centruCircumscris.X, centruCircumscris.Y);
+
+
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("de facyt", ex);
+            }
         }
 
 
@@ -651,7 +671,13 @@ namespace Proiect
             g.DrawLine(p, p3, new Point((int)H3.X, (int)H3.Y));
 
             
+
+            
             PointF ortocentru = GetIntersectie(p1, H1, p2, Point.Round(H2));
+
+            g.DrawLine(p, ortocentru, new Point((int)H1.X, (int)H1.Y));
+            g.DrawLine(p, ortocentru, new Point((int)H2.X, (int)H2.Y));
+            g.DrawLine(p, ortocentru, new Point((int)H3.X, (int)H3.Y));
 
             int diametru = 10;
             g.FillEllipse(Brushes.DarkGreen, ortocentru.X - diametru / 2, ortocentru.Y - diametru / 2, diametru, diametru);
