@@ -51,7 +51,6 @@ namespace Proiect
 
         }
 
-
         ///Functii accesor pentru atributele clasei
         public int GetNrOfPoints() => nOfPoints;
         /// <summary>
@@ -167,9 +166,6 @@ namespace Proiect
             return RazaCercCircumscris(p1,p2,p3);
         }
 
-      
-
-
         /// <summary>
         /// Functia implementata din IObservableObj
         /// </summary>
@@ -198,7 +194,6 @@ namespace Proiect
                 s.Update(p1, p2, p3, nOfPoints);
             }
         }
-
 
         /// <summary>
         /// Zona pentru afisarea valorilor masuratorilor
@@ -292,8 +287,6 @@ namespace Proiect
                 throw new Exception("de facyt", ex);
             }
         }
-
-
 
         /// <summary>
         /// Functie de callback pentru redesenarea al celui de al doilea punct al triunghiului
@@ -470,7 +463,6 @@ namespace Proiect
             return new PointF(x, y);
         }
 
-
         /// <summary>
         /// Calculează centrul cercului înscris în triunghiul definit de cele trei puncte
         /// </summary>
@@ -515,7 +507,6 @@ namespace Proiect
         /// <param name="p2">Al doilea vârf al triunghiului</param>
         /// <param name="p3">Al treilea vârf al triunghiului</param>
         /// <returns>Punctul cu coordonatele centrului cercului circumscris</returns>
-
         private PointF CentruCercCircumscris(Point p1, Point p2, Point p3)
         {
             // coordonatele celor 3 puncte
@@ -562,7 +553,6 @@ namespace Proiect
             return (a * b * c) / (4 * aria);
         }
 
-
         /// <summary>
         /// Functie ce va returna punctul de intersectie dintre o dreapta si perpendiculara dusa dintr-un punct pe acea dreapta
         /// </summary>
@@ -608,7 +598,6 @@ namespace Proiect
         /// <param name="p4">Al doilea punct pe a doua dreaptă.</param>
         /// <returns>Punctul de intersecție al celor două drepte</returns>
         /// <exception cref="ArgumentException">Dacă dreptele sunt paralele și nu se intersectează</exception>
-
         private PointF GetIntersectie(Point p1, PointF p2, Point p3, Point p4)
         {
             //coeficienti pante
@@ -644,7 +633,6 @@ namespace Proiect
         /// </summary>
         /// <param name="g">Obiectul Graphics pe care se face desenul.</param>
         /// <exception cref="Exception">Aruncă excepția cu un mesaj specific în cazul unei erori.</exception>
-
         private void DesenareTriunghi(Graphics g)
         {
             try
@@ -668,6 +656,10 @@ namespace Proiect
                     {
                         DesenareInaltime(g, p1, p2, p3);
                     }
+                    if(checkBoxMediatoare.Checked)
+                    {
+                        DesenareMediatoare(g, p1, p2, p3);
+                    }
                 }
                 else
                 {
@@ -678,8 +670,6 @@ namespace Proiect
             {
                 throw new Exception("De implementat", e);
             }
-
-
         }
 
         /// <summary>
@@ -846,7 +836,6 @@ namespace Proiect
 
         }
 
-
         /// <summary>
         /// Desenează înălțimile triunghiului format de punctele p1, p2 și p3,
         /// </summary>
@@ -880,6 +869,12 @@ namespace Proiect
             g.FillEllipse(Brushes.DarkGreen, ortocentru.X - diametru / 2, ortocentru.Y - diametru / 2, diametru, diametru);
         }
 
+        private void checkBoxMediatoare_CheckedChanged(object sender, EventArgs e)
+        {
+            pictureBox1.Invalidate();
+            Notify();
+        }
+
         private void DesenarePrelungireLatura(Graphics g, Point p1, Point p2)
         {
             const float extensie = 500;
@@ -904,5 +899,37 @@ namespace Proiect
                 g.DrawLine(penPunctat, pStart, pEnd);
             }
         }
+
+        private void DesenareMediatoareLatura(Graphics g, Point p1, Point p2)
+        {
+            //calculam mijlocul laturei formata de punctele p1 si p2
+            PointF mijloc = new PointF((p1.X + p2.X) / 2f, (p1.Y + p2.Y) / 2f);
+
+            //calculam vectorul directiei dintre cele doua puncte
+            float dx = p2.X - p1.X;
+            float dy = p2.Y - p1.Y;
+
+            //calculam distanta dintre cele doua puncte
+            double lungime = GetDistanta(p1, p2);
+
+            //normalizam vectorul perpendicular
+            float nx = -dy / (float)lungime;
+            float ny = dx / (float)lungime;
+
+            //extindem linia mediatoarei
+            float extensie = 200;
+            PointF pStart = new PointF(mijloc.X - nx * extensie, mijloc.Y - ny * extensie);
+            PointF pEnd = new PointF(mijloc.X + nx * extensie, mijloc.Y + ny * extensie);
+
+            Pen p = new Pen(Color.Cyan, 1);
+            g.DrawLine(p, pStart, pEnd);
+        }
+
+        private void DesenareMediatoare(Graphics g, Point p1, Point p2, Point p3)
+        {
+            DesenareMediatoareLatura(g, p1, p2);
+            DesenareMediatoareLatura(g, p2, p3);
+            DesenareMediatoareLatura(g, p1, p3);
         }
     }
+}
