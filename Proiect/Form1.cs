@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
@@ -634,8 +635,6 @@ namespace Proiect
         }
 
 
-
-
         //////    FUNCTII PENTRU DESENAREA TRIUNGHIULUI / ELEMENTELOR SPECIFICE TRIUNGHILUI    //////////////////////////////////////////////
 
 
@@ -866,21 +865,44 @@ namespace Proiect
             g.DrawLine(p, p2, new Point((int)H2.X, (int)H2.Y));
             g.DrawLine(p, p3, new Point((int)H3.X, (int)H3.Y));
 
-            
-
-            
             PointF ortocentru = GetIntersectie(p1, H1, p2, Point.Round(H2));
 
             g.DrawLine(p, ortocentru, new Point((int)H1.X, (int)H1.Y));
             g.DrawLine(p, ortocentru, new Point((int)H2.X, (int)H2.Y));
             g.DrawLine(p, ortocentru, new Point((int)H3.X, (int)H3.Y));
 
+            // desenam prelungirile laturilor in cazul incare triunghiul contine un unghi obtuz
+            DesenarePrelungireLatura(g, p1, p2);
+            DesenarePrelungireLatura(g, p2, p3);
+            DesenarePrelungireLatura(g, p1, p3);
+
             int diametru = 10;
             g.FillEllipse(Brushes.DarkGreen, ortocentru.X - diametru / 2, ortocentru.Y - diametru / 2, diametru, diametru);
-
-
         }
 
+        private void DesenarePrelungireLatura(Graphics g, Point p1, Point p2)
+        {
+            const float extensie = 500;
 
+            //calculam directia
+            float dx = p2.X - p1.X;
+            float dy = p2.Y - p1.Y;
+
+            double lungime = CalculeazaDistanta(p1, p2);
+
+            //normalizam vectorul directie
+            dx /= (float)lungime;
+            dy /= (float)lungime;
+
+            //prelungim linia in ambele directii
+            PointF pStart = new PointF(p1.X - dx * extensie, p1.Y - dy * extensie);
+            PointF pEnd = new PointF(p2.X + dx * extensie, p2.Y + dy * extensie);
+
+            using (Pen penPunctat = new Pen(Color.Gray, 1))
+            {
+                penPunctat.DashStyle = DashStyle.Dot;
+                g.DrawLine(penPunctat, pStart, pEnd);
+            }
+        }
+        }
     }
-}
