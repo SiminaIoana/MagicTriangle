@@ -9,6 +9,8 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Runtime.CompilerServices;
+
 
 namespace Proiect
 {
@@ -214,7 +216,8 @@ namespace Proiect
         {
             if(vP1 == 0 || vP2 == 0 || vP3 == 0)
             {
-                MessageBox.Show("Trebuie setate toate punctele!");
+                //MessageBox.Show("Trebuie setate toate punctele!");
+                MesajEroare(new Exception("Trebuie să setați toate cele 3 puncte ale triunghiului."));
             }
             vP1 = 0;
             nOfPoints = 2;
@@ -229,7 +232,7 @@ namespace Proiect
         {
             if (vP1 == 0 || vP2 == 0 || vP3 == 0)
             {
-                MessageBox.Show("Trebuie setate toate punctele!");
+                MesajEroare(new Exception("Trebuie să setați toate cele 3 puncte ale triunghiului."));
             }
             vP3 = 0;
             nOfPoints = 2;
@@ -267,8 +270,7 @@ namespace Proiect
         {
             if (nOfPoints < 3)
             {
-                //de facut functie de erori
-               // FunctieErori(new Exception("Introduceti mai intai toate cele 3 punte!!"));
+                MesajEroare(new Exception("Trebuie să setați toate cele 3 puncte ale triunghiului."));
                 return;
             }
             try
@@ -284,7 +286,8 @@ namespace Proiect
             }
             catch (Exception ex)
             {
-                throw new Exception("de facyt", ex);
+                MesajEroare(ex);
+                return;
             }
         }
 
@@ -363,7 +366,7 @@ namespace Proiect
             catch(Exception ex)
             {
                 //trebuie implementata o functie pentru ErrorHandle
-                throw new Exception("ttt",ex);
+                MesajEroare(ex);
             }
         }
 
@@ -668,7 +671,7 @@ namespace Proiect
             }
             catch(Exception e)
             {
-                throw new Exception("De implementat", e);
+                MesajEroare(e);
             }
         }
 
@@ -686,7 +689,7 @@ namespace Proiect
             float diametru = 2 * raza;
             float x = centru.X - raza;
             float y = centru.Y - raza;
-            g.DrawEllipse(Pens.BlueViolet, x, y, diametru, diametru);
+            g.DrawEllipse(Pens.DarkBlue, x, y, diametru, diametru);
         }
 
         /// <summary>
@@ -721,7 +724,7 @@ namespace Proiect
             PointF i2 = GetIntersectie(p2, centruInscris, p1, p3);
             PointF i3 = GetIntersectie(p3, centruInscris, p1, p2);
 
-            Pen p = new Pen(Color.LightSkyBlue, 1);
+            Pen p = new Pen(Color.DarkBlue, 1);
             g.DrawLine(p, p1, i1);
             g.DrawLine(p, p2, i2);
             g.DrawLine(p, p3, i3);
@@ -782,6 +785,12 @@ namespace Proiect
         /// <param name="sender">Obiectul care a generat evenimentul</param>
         /// <param name="e">Datele evenimentului</param>
         private void checkBoxCercCircumscris_CheckedChanged(object sender, EventArgs e)
+        {
+            pictureBox1.Invalidate();
+            Notify();
+        }
+
+        private void checkBoxMediatoare_CheckedChanged(object sender, EventArgs e)
         {
             pictureBox1.Invalidate();
             Notify();
@@ -856,28 +865,23 @@ namespace Proiect
 
             PointF ortocentru = GetIntersectie(p1, H1, p2, Point.Round(H2));
 
-            g.DrawLine(p, ortocentru, new Point((int)H1.X, (int)H1.Y));
-            g.DrawLine(p, ortocentru, new Point((int)H2.X, (int)H2.Y));
-            g.DrawLine(p, ortocentru, new Point((int)H3.X, (int)H3.Y));
-
             // desenam prelungirile laturilor in cazul incare triunghiul contine un unghi obtuz
             DesenarePrelungireLatura(g, p1, p2);
             DesenarePrelungireLatura(g, p2, p3);
             DesenarePrelungireLatura(g, p1, p3);
 
+            // desenam inaltimile
+            g.DrawLine(p, ortocentru, new Point((int)H1.X, (int)H1.Y));
+            g.DrawLine(p, ortocentru, new Point((int)H2.X, (int)H2.Y));
+            g.DrawLine(p, ortocentru, new Point((int)H3.X, (int)H3.Y));
+
             int diametru = 10;
             g.FillEllipse(Brushes.DarkGreen, ortocentru.X - diametru / 2, ortocentru.Y - diametru / 2, diametru, diametru);
         }
 
-        private void checkBoxMediatoare_CheckedChanged(object sender, EventArgs e)
-        {
-            pictureBox1.Invalidate();
-            Notify();
-        }
-
         private void DesenarePrelungireLatura(Graphics g, Point p1, Point p2)
         {
-            const float extensie = 500;
+            const float extensie = 100;
 
             //calculam directia
             float dx = p2.X - p1.X;
@@ -900,7 +904,7 @@ namespace Proiect
             }
         }
 
-        private void DesenareMediatoareLatura(Graphics g, Point p1, Point p2)
+        private void DesenarePrelungireMediatoare(Graphics g, Point p1, Point p2)
         {
             //calculam mijlocul laturei formata de punctele p1 si p2
             PointF mijloc = new PointF((p1.X + p2.X) / 2f, (p1.Y + p2.Y) / 2f);
@@ -917,19 +921,55 @@ namespace Proiect
             float ny = dx / (float)lungime;
 
             //extindem linia mediatoarei
-            float extensie = 200;
+            float extensie = 50;
             PointF pStart = new PointF(mijloc.X - nx * extensie, mijloc.Y - ny * extensie);
             PointF pEnd = new PointF(mijloc.X + nx * extensie, mijloc.Y + ny * extensie);
 
-            Pen p = new Pen(Color.Cyan, 1);
-            g.DrawLine(p, pStart, pEnd);
+            using (Pen penPunctat = new Pen(Color.Gray, 1))
+            {
+                penPunctat.DashStyle = DashStyle.Dot;
+                g.DrawLine(penPunctat, pStart, pEnd);
+            }
+        }
+
+        private void DesenareMediatoareLatura(Graphics g, Point p1, Point p2, PointF centru)
+        {
+            // Calculăm mijlocul laturii formate de p1 și p2
+            PointF mijloc = new PointF((p1.X + p2.X) / 2f, (p1.Y + p2.Y) / 2f);
+
+            // Desenăm linia dintre mijloc și centrul cercului circumscris
+            Pen p = new Pen(Color.Red, 1);
+            g.DrawLine(p, mijloc, centru);
         }
 
         private void DesenareMediatoare(Graphics g, Point p1, Point p2, Point p3)
         {
-            DesenareMediatoareLatura(g, p1, p2);
-            DesenareMediatoareLatura(g, p2, p3);
-            DesenareMediatoareLatura(g, p1, p3);
+            PointF centru = CentruCercCircumscris(p1, p2, p3);
+
+            DesenarePrelungireMediatoare(g, p1, p2);
+            DesenarePrelungireMediatoare(g, p2, p3);
+            DesenarePrelungireMediatoare(g, p1, p3);
+
+            DesenareMediatoareLatura(g, p1, p2, centru);
+            DesenareMediatoareLatura(g, p2, p3, centru);
+            DesenareMediatoareLatura(g, p1, p3, centru);
+
+            // Desenăm centrul cercului circumscris ca un punct
+            int diametru = 10;
+            g.FillEllipse(Brushes.Red, centru.X - diametru / 2, centru.Y - diametru / 2, diametru, diametru);
         }
+
+        private void MesajEroare(Exception e, [CallerMemberName] string functie = "")
+        {
+            string mesaj = $"A apărut o eroare în execuția programului.";
+
+            // informatii detaliate pentru debug
+            mesaj += $"\n\nMesaj: {e.Message}";
+            mesaj += $"\nTip: {e.GetType().Name}";
+            mesaj += $"\nFuncție: {functie}";
+
+            MessageBox.Show(mesaj, "Eroare critică", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
     }
 }
