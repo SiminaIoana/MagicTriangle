@@ -37,6 +37,12 @@ namespace Proiect
         {
             InitializeComponent();
 
+            //facem interfata mai mare pentru o vizualizare mai buna
+            this.WindowState = FormWindowState.Maximized;
+            pictureBox1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right | AnchorStyles.Bottom;
+            buttonExit.Anchor = AnchorStyles.Bottom;
+            buttonHelp.Anchor = AnchorStyles.Bottom;
+
             //initializarea observatorului 
             new TriangleSubscriber(this);
             pictureBox1.MouseClick += new MouseEventHandler(pictureBox1_Click);
