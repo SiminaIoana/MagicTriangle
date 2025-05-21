@@ -175,6 +175,11 @@ namespace Proiect
         private static double CalculeazaPerimetru(Point p1, Point p2, Point p3)
         {
 
+            if (p1 == p2 || p2 == p3 || p1 == p3)
+            {
+                throw new ArgumentException("Aceste puncte sunt identice");
+            }
+
             double l1 = CalculeazaDistanta(p1, p2);
             double l2 = CalculeazaDistanta(p2, p3);
             double l3 = CalculeazaDistanta(p3, p1);
@@ -192,6 +197,12 @@ namespace Proiect
         /// <returns>Aria triunghiului.</returns>
         private static double Arie(Point p1, Point p2, Point p3)
         {
+
+            if (p1 == p2 || p2 == p3 || p1 == p3)
+            {
+                throw new ArgumentException("Aceste puncte sunt identice");
+            } 
+
             double l1 = CalculeazaDistanta(p1, p2);
             double l2 = CalculeazaDistanta(p2, p3);
             double l3 = CalculeazaDistanta(p3, p1);
