@@ -1,0 +1,237 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<HTML><HEAD></HEAD><BODY>
+<OBJECT type="text/site properties">
+<param name="FrameName" value="right">
+</OBJECT>
+<UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_proiect_1_1_form1.html#a24a5db3d55d18b49b32dbe82cf95b5ca"><param name="Name" value="AddSubscriber(ISubscriber subscriber)"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_proiect_1_1_form1.html#a24a5db3d55d18b49b32dbe82cf95b5ca"><param name="Name" value="Proiect::Form1"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="interface_proiect_1_1_i_observable_obj.html#a80aeb06fa933f56e5ee03b60cefddc1f"><param name="Name" value="AddSubscriber(ISubscriber subscriber)"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="interface_proiect_1_1_i_observable_obj.html#a80aeb06fa933f56e5ee03b60cefddc1f"><param name="Name" value="Proiect::IObservableObj"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_proiect_1_1_form1.html#a13ed7441430dd6eb1f63eb1570cedadd"><param name="Name" value="Dispose(bool disposing)"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_proiect_1_1_form1.html#acab203e745163b5368fcaf6b44e149d6"><param name="Name" value="Form1()"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_proiect_1_1_form1.html#a863f328969d28b075f0ba2cf44e71ec2"><param name="Name" value="GetNrOfPoints()"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_proiect_1_1_form1.html#a204eab76607e1fb738120e9dbe45403d"><param name="Name" value="GetP1()"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_proiect_1_1_form1.html#a84507a98c6075f82f3222dcc2ff32af7"><param name="Name" value="GetP2()"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_proiect_1_1_form1.html#a0ffb2e5fd75e788d50797bb6d291a5ca"><param name="Name" value="GetP3()"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_proiect_1_1_form1.html#ac2c7e7238763db5b216e918605b579fe"><param name="Name" value="GetV1()"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_proiect_1_1_form1.html#a2f99baf79bf0b68b4b6246edc4daa3ce"><param name="Name" value="GetV2()"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_proiect_1_1_form1.html#adae15904fe999ca1615442141fd7d2a4"><param name="Name" value="GetV3()"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_proiect_1_1_form1.html#a1640483d82968a2bc132c71bdebe0c5c"><param name="Name" value="Notify()"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_proiect_1_1_form1.html#a1640483d82968a2bc132c71bdebe0c5c"><param name="Name" value="Proiect::Form1"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="interface_proiect_1_1_i_observable_obj.html#ac661a7b3dcbd7201252119c6c5dc29b1"><param name="Name" value="Notify()"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="interface_proiect_1_1_i_observable_obj.html#ac661a7b3dcbd7201252119c6c5dc29b1"><param name="Name" value="Proiect::IObservableObj"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_proiect.html"><param name="Name" value="Proiect"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_proiect_1_1_form1.html"><param name="Name" value="Proiect::Form1"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_proiect_1_1_form1.html"><param name="Name" value="Proiect::Form1"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_proiect_1_1_form1.html#a24a5db3d55d18b49b32dbe82cf95b5ca"><param name="Name" value="AddSubscriber(ISubscriber subscriber)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_proiect_1_1_form1.html"><param name="Name" value="Proiect::Form1"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_proiect_1_1_form1.html#a13ed7441430dd6eb1f63eb1570cedadd"><param name="Name" value="Dispose(bool disposing)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_proiect_1_1_form1.html"><param name="Name" value="Proiect::Form1"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_proiect_1_1_form1.html#acab203e745163b5368fcaf6b44e149d6"><param name="Name" value="Form1()"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_proiect_1_1_form1.html"><param name="Name" value="Proiect::Form1"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_proiect_1_1_form1.html#a863f328969d28b075f0ba2cf44e71ec2"><param name="Name" value="GetNrOfPoints()"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_proiect_1_1_form1.html"><param name="Name" value="Proiect::Form1"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_proiect_1_1_form1.html#a204eab76607e1fb738120e9dbe45403d"><param name="Name" value="GetP1()"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_proiect_1_1_form1.html"><param name="Name" value="Proiect::Form1"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_proiect_1_1_form1.html#a84507a98c6075f82f3222dcc2ff32af7"><param name="Name" value="GetP2()"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_proiect_1_1_form1.html"><param name="Name" value="Proiect::Form1"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_proiect_1_1_form1.html#a0ffb2e5fd75e788d50797bb6d291a5ca"><param name="Name" value="GetP3()"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_proiect_1_1_form1.html"><param name="Name" value="Proiect::Form1"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_proiect_1_1_form1.html#ac2c7e7238763db5b216e918605b579fe"><param name="Name" value="GetV1()"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_proiect_1_1_form1.html"><param name="Name" value="Proiect::Form1"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_proiect_1_1_form1.html#a2f99baf79bf0b68b4b6246edc4daa3ce"><param name="Name" value="GetV2()"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_proiect_1_1_form1.html"><param name="Name" value="Proiect::Form1"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_proiect_1_1_form1.html#adae15904fe999ca1615442141fd7d2a4"><param name="Name" value="GetV3()"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_proiect_1_1_form1.html"><param name="Name" value="Proiect::Form1"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_proiect_1_1_form1.html#a1640483d82968a2bc132c71bdebe0c5c"><param name="Name" value="Notify()"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_proiect_1_1_form1.html"><param name="Name" value="Proiect::Form1"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_proiect_1_1_form1.html#ae457bec5f1b87416d66ad0bbe8eeb3a3"><param name="Name" value="RemoveSubscriber(ISubscriber subscriber)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_proiect_1_1_form1.html"><param name="Name" value="Proiect::Form1"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_proiect_1_1_form1.html#a7b60887b2c9af29f6bf11045a7441e49"><param name="Name" value="richTextBoxCalculate"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="interface_proiect_1_1_i_observable_obj.html"><param name="Name" value="Proiect::IObservableObj"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="interface_proiect_1_1_i_observable_obj.html"><param name="Name" value="Proiect::IObservableObj"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="interface_proiect_1_1_i_observable_obj.html#a80aeb06fa933f56e5ee03b60cefddc1f"><param name="Name" value="AddSubscriber(ISubscriber subscriber)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="interface_proiect_1_1_i_observable_obj.html"><param name="Name" value="Proiect::IObservableObj"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="interface_proiect_1_1_i_observable_obj.html#ac661a7b3dcbd7201252119c6c5dc29b1"><param name="Name" value="Notify()"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="interface_proiect_1_1_i_observable_obj.html"><param name="Name" value="Proiect::IObservableObj"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="interface_proiect_1_1_i_observable_obj.html#a8b9b804bdee569c3676699c2ecdc118d"><param name="Name" value="RemoveSubscriber(ISubscriber subscriber)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="interface_proiect_1_1_i_subscriber.html"><param name="Name" value="Proiect::ISubscriber"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="interface_proiect_1_1_i_subscriber.html"><param name="Name" value="Proiect::ISubscriber"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="interface_proiect_1_1_i_subscriber.html#ae3bb1b0ca446d429182d62afc84559de"><param name="Name" value="Update(Point p1, Point p2, Point p3, int numberOfPoints)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_proiect_1_1_properties.html"><param name="Name" value="Proiect::Properties"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_proiect_1_1_utils.html"><param name="Name" value="Proiect::Utils"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_proiect_1_1_form1.html#ae457bec5f1b87416d66ad0bbe8eeb3a3"><param name="Name" value="RemoveSubscriber(ISubscriber subscriber)"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_proiect_1_1_form1.html#ae457bec5f1b87416d66ad0bbe8eeb3a3"><param name="Name" value="Proiect::Form1"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="interface_proiect_1_1_i_observable_obj.html#a8b9b804bdee569c3676699c2ecdc118d"><param name="Name" value="RemoveSubscriber(ISubscriber subscriber)"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="interface_proiect_1_1_i_observable_obj.html#a8b9b804bdee569c3676699c2ecdc118d"><param name="Name" value="Proiect::IObservableObj"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_proiect_1_1_form1.html#a7b60887b2c9af29f6bf11045a7441e49"><param name="Name" value="richTextBoxCalculate"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_triangle_test_1_1_unit_test1.html#a6d21c9c62248530ac9196de41e509eec"><param name="Name" value="Setup()"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_triangle_test_1_1_unit_test1.html#a0ea3d7d2bc84a54175eb6acb5c138af7"><param name="Name" value="TestArie_TringhiDreptunghic()"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_triangle_test_1_1_unit_test1.html#ad767307bdbce4ec251fabc94009189eb"><param name="Name" value="TestAriePuncteIdentice()"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_triangle_test_1_1_unit_test1.html#aa544ec565a76cacbbd33a3d91bb6d8de"><param name="Name" value="TestCalculeazaIntersectiaExceptia()"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_triangle_test_1_1_unit_test1.html#abfe2863423457eb95926a0e5e8674f00"><param name="Name" value="TestCalculeazaIntersectie()"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_triangle_test_1_1_unit_test1.html#a4da96bb8776aa097340b12b7862300a9"><param name="Name" value="TestCentruCercCircumscris()"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_triangle_test_1_1_unit_test1.html#a1ddd166ae712de26bcedea1db8f44e8e"><param name="Name" value="TestCentruCercInscris()"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_triangle_test_1_1_unit_test1.html#aaa5ff65113607d33fbda9eb0a7fe0347"><param name="Name" value="TestCentruGreutate()"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_triangle_test_1_1_unit_test1.html#aa163146b47f5b0649c817c579be55490"><param name="Name" value="TestDistanta()"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_triangle_test_1_1_unit_test1.html#a7fd92f1bb50cdb35f24ecacb2cc3e43e"><param name="Name" value="TestDistanta_SamePoint()"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_triangle_test_1_1_unit_test1.html#a78377e07eadd6f40276f45d295408750"><param name="Name" value="TestGetNumberOfPoints()"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_triangle_test_1_1_unit_test1.html#a1ccc5ba421e3e9f4bddfdc5e2ad240c9"><param name="Name" value="TestGetP1()"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_triangle_test_1_1_unit_test1.html#afe56fec66cafe0d4f5dbc1c45b41c644"><param name="Name" value="TestGetP2()"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_triangle_test_1_1_unit_test1.html#a8e97774a85f8750ca1afe78be26eb2bb"><param name="Name" value="TestGetP3()"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_triangle_test_1_1_unit_test1.html#aced074b27a8183afae3048072c27d6be"><param name="Name" value="TestGetV1()"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_triangle_test_1_1_unit_test1.html#a8a1bb8e45375cebabe3bcf5003fbc3f1"><param name="Name" value="TestGetV2()"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_triangle_test_1_1_unit_test1.html#ab604874d06ab06bb4242e83802c5588b"><param name="Name" value="TestGetV3()"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_unit_test_1_1_unit_test1.html#acaeb40b8cb333145d55ae5ebc02971ef"><param name="Name" value="TestMethod1()"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_triangle_test_1_1_unit_test1.html#a72b51d784634b9cf3c1637f8037000cc"><param name="Name" value="TestPerimetru()"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_triangle_test_1_1_unit_test1.html#a212621a44bd7fecbde7da03372ff5b1b"><param name="Name" value="TestPerpendicularaPunctDreapta()"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_triangle_test_1_1_unit_test1.html#ab1050fbd494b0a41cf4d132022591393"><param name="Name" value="TestRazaCercCircumscris()"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_triangle_test_1_1_unit_test1.html#ae75ccbdaaecefe108d5a7bb7c20f6965"><param name="Name" value="TestRazaCercCircumscrisExceptie()"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_triangle_test_1_1_unit_test1.html#aa7f04efb141579126fbcd2658a818bcf"><param name="Name" value="TestRazaCercInscris()"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_triangle_test.html"><param name="Name" value="TriangleTest"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_triangle_test_1_1_unit_test1.html"><param name="Name" value="TriangleTest::UnitTest1"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_triangle_test_1_1_unit_test1.html"><param name="Name" value="TriangleTest::UnitTest1"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_triangle_test_1_1_unit_test1.html#a6d21c9c62248530ac9196de41e509eec"><param name="Name" value="Setup()"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_triangle_test_1_1_unit_test1.html"><param name="Name" value="TriangleTest::UnitTest1"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_triangle_test_1_1_unit_test1.html#a0ea3d7d2bc84a54175eb6acb5c138af7"><param name="Name" value="TestArie_TringhiDreptunghic()"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_triangle_test_1_1_unit_test1.html"><param name="Name" value="TriangleTest::UnitTest1"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_triangle_test_1_1_unit_test1.html#ad767307bdbce4ec251fabc94009189eb"><param name="Name" value="TestAriePuncteIdentice()"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_triangle_test_1_1_unit_test1.html"><param name="Name" value="TriangleTest::UnitTest1"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_triangle_test_1_1_unit_test1.html#aa544ec565a76cacbbd33a3d91bb6d8de"><param name="Name" value="TestCalculeazaIntersectiaExceptia()"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_triangle_test_1_1_unit_test1.html"><param name="Name" value="TriangleTest::UnitTest1"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_triangle_test_1_1_unit_test1.html#abfe2863423457eb95926a0e5e8674f00"><param name="Name" value="TestCalculeazaIntersectie()"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_triangle_test_1_1_unit_test1.html"><param name="Name" value="TriangleTest::UnitTest1"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_triangle_test_1_1_unit_test1.html#a4da96bb8776aa097340b12b7862300a9"><param name="Name" value="TestCentruCercCircumscris()"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_triangle_test_1_1_unit_test1.html"><param name="Name" value="TriangleTest::UnitTest1"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_triangle_test_1_1_unit_test1.html#a1ddd166ae712de26bcedea1db8f44e8e"><param name="Name" value="TestCentruCercInscris()"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_triangle_test_1_1_unit_test1.html"><param name="Name" value="TriangleTest::UnitTest1"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_triangle_test_1_1_unit_test1.html#aaa5ff65113607d33fbda9eb0a7fe0347"><param name="Name" value="TestCentruGreutate()"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_triangle_test_1_1_unit_test1.html"><param name="Name" value="TriangleTest::UnitTest1"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_triangle_test_1_1_unit_test1.html#aa163146b47f5b0649c817c579be55490"><param name="Name" value="TestDistanta()"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_triangle_test_1_1_unit_test1.html"><param name="Name" value="TriangleTest::UnitTest1"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_triangle_test_1_1_unit_test1.html#a7fd92f1bb50cdb35f24ecacb2cc3e43e"><param name="Name" value="TestDistanta_SamePoint()"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_triangle_test_1_1_unit_test1.html"><param name="Name" value="TriangleTest::UnitTest1"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_triangle_test_1_1_unit_test1.html#a78377e07eadd6f40276f45d295408750"><param name="Name" value="TestGetNumberOfPoints()"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_triangle_test_1_1_unit_test1.html"><param name="Name" value="TriangleTest::UnitTest1"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_triangle_test_1_1_unit_test1.html#a1ccc5ba421e3e9f4bddfdc5e2ad240c9"><param name="Name" value="TestGetP1()"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_triangle_test_1_1_unit_test1.html"><param name="Name" value="TriangleTest::UnitTest1"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_triangle_test_1_1_unit_test1.html#afe56fec66cafe0d4f5dbc1c45b41c644"><param name="Name" value="TestGetP2()"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_triangle_test_1_1_unit_test1.html"><param name="Name" value="TriangleTest::UnitTest1"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_triangle_test_1_1_unit_test1.html#a8e97774a85f8750ca1afe78be26eb2bb"><param name="Name" value="TestGetP3()"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_triangle_test_1_1_unit_test1.html"><param name="Name" value="TriangleTest::UnitTest1"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_triangle_test_1_1_unit_test1.html#aced074b27a8183afae3048072c27d6be"><param name="Name" value="TestGetV1()"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_triangle_test_1_1_unit_test1.html"><param name="Name" value="TriangleTest::UnitTest1"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_triangle_test_1_1_unit_test1.html#a8a1bb8e45375cebabe3bcf5003fbc3f1"><param name="Name" value="TestGetV2()"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_triangle_test_1_1_unit_test1.html"><param name="Name" value="TriangleTest::UnitTest1"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_triangle_test_1_1_unit_test1.html#ab604874d06ab06bb4242e83802c5588b"><param name="Name" value="TestGetV3()"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_triangle_test_1_1_unit_test1.html"><param name="Name" value="TriangleTest::UnitTest1"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_triangle_test_1_1_unit_test1.html#a72b51d784634b9cf3c1637f8037000cc"><param name="Name" value="TestPerimetru()"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_triangle_test_1_1_unit_test1.html"><param name="Name" value="TriangleTest::UnitTest1"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_triangle_test_1_1_unit_test1.html#a212621a44bd7fecbde7da03372ff5b1b"><param name="Name" value="TestPerpendicularaPunctDreapta()"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_triangle_test_1_1_unit_test1.html"><param name="Name" value="TriangleTest::UnitTest1"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_triangle_test_1_1_unit_test1.html#ab1050fbd494b0a41cf4d132022591393"><param name="Name" value="TestRazaCercCircumscris()"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_triangle_test_1_1_unit_test1.html"><param name="Name" value="TriangleTest::UnitTest1"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_triangle_test_1_1_unit_test1.html#ae75ccbdaaecefe108d5a7bb7c20f6965"><param name="Name" value="TestRazaCercCircumscrisExceptie()"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_triangle_test_1_1_unit_test1.html"><param name="Name" value="TriangleTest::UnitTest1"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_triangle_test_1_1_unit_test1.html#aa7f04efb141579126fbcd2658a818bcf"><param name="Name" value="TestRazaCercInscris()"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_unit_test.html"><param name="Name" value="UnitTest"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_unit_test_1_1_unit_test1.html"><param name="Name" value="UnitTest::UnitTest1"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_unit_test_1_1_unit_test1.html"><param name="Name" value="UnitTest::UnitTest1"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_unit_test_1_1_unit_test1.html#acaeb40b8cb333145d55ae5ebc02971ef"><param name="Name" value="TestMethod1()"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="interface_proiect_1_1_i_subscriber.html#ae3bb1b0ca446d429182d62afc84559de"><param name="Name" value="Update(Point p1, Point p2, Point p3, int numberOfPoints)"></OBJECT>
+</UL>
+</BODY>
+</HTML>

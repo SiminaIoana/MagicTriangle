@@ -179,8 +179,7 @@ namespace Proiect
         /// <param name="e"></param>
         private void buttonHelp_Click(object sender, EventArgs e)
         {
-
-
+            System.Diagnostics.Process.Start("MagicTriangle.chm");
         }
 
         /// <summary>

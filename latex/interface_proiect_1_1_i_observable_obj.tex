@@ -1,0 +1,85 @@
+\doxysection{Proiect.\+IObservable\+Obj Interface Reference}
+\hypertarget{interface_proiect_1_1_i_observable_obj}{}\label{interface_proiect_1_1_i_observable_obj}\index{Proiect.IObservableObj@{Proiect.IObservableObj}}
+
+
+Interfata pentru obiectele care vor fi \textquotesingle{}observate\textquotesingle{} si despre care subscriberii vor primii informatii actualizate Folosita pentru a implementa design patternul Observer, fiind interfata subiectului observat.  
+
+
+Inheritance diagram for Proiect.\+IObservable\+Obj\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{interface_proiect_1_1_i_observable_obj}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{interface_proiect_1_1_i_observable_obj_a80aeb06fa933f56e5ee03b60cefddc1f}{Add\+Subscriber}} (\mbox{\hyperlink{interface_proiect_1_1_i_subscriber}{ISubscriber}} subscriber)
+\begin{DoxyCompactList}\small\item\em functie de adaugare a unui subscriber in lista de urmaritori a obiectului observat \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{interface_proiect_1_1_i_observable_obj_a8b9b804bdee569c3676699c2ecdc118d}{Remove\+Subscriber}} (\mbox{\hyperlink{interface_proiect_1_1_i_subscriber}{ISubscriber}} subscriber)
+\begin{DoxyCompactList}\small\item\em Functie pentru stergerea din lista a unui urmaritor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{interface_proiect_1_1_i_observable_obj_ac661a7b3dcbd7201252119c6c5dc29b1}{Notify}} ()
+\begin{DoxyCompactList}\small\item\em Functie pentru notificarea urmaritorilor cu referire la ceea ce s-\/a intamplat cu obiectul observat. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Interfata pentru obiectele care vor fi \textquotesingle{}observate\textquotesingle{} si despre care subscriberii vor primii informatii actualizate Folosita pentru a implementa design patternul Observer, fiind interfata subiectului observat. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{interface_proiect_1_1_i_observable_obj_a80aeb06fa933f56e5ee03b60cefddc1f}\index{Proiect.IObservableObj@{Proiect.IObservableObj}!AddSubscriber@{AddSubscriber}}
+\index{AddSubscriber@{AddSubscriber}!Proiect.IObservableObj@{Proiect.IObservableObj}}
+\doxysubsubsection{\texorpdfstring{AddSubscriber()}{AddSubscriber()}}
+{\footnotesize\ttfamily \label{interface_proiect_1_1_i_observable_obj_a80aeb06fa933f56e5ee03b60cefddc1f} 
+void Proiect.\+IObservable\+Obj.\+Add\+Subscriber (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_proiect_1_1_i_subscriber}{ISubscriber}}}]{subscriber}{}\end{DoxyParamCaption})}
+
+
+
+functie de adaugare a unui subscriber in lista de urmaritori a obiectului observat 
+
+
+\begin{DoxyParams}{Parameters}
+{\em subscriber} & \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_proiect_1_1_form1_a24a5db3d55d18b49b32dbe82cf95b5ca}{Proiect.\+Form1}}.
+
+\Hypertarget{interface_proiect_1_1_i_observable_obj_ac661a7b3dcbd7201252119c6c5dc29b1}\index{Proiect.IObservableObj@{Proiect.IObservableObj}!Notify@{Notify}}
+\index{Notify@{Notify}!Proiect.IObservableObj@{Proiect.IObservableObj}}
+\doxysubsubsection{\texorpdfstring{Notify()}{Notify()}}
+{\footnotesize\ttfamily \label{interface_proiect_1_1_i_observable_obj_ac661a7b3dcbd7201252119c6c5dc29b1} 
+void Proiect.\+IObservable\+Obj.\+Notify (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Functie pentru notificarea urmaritorilor cu referire la ceea ce s-\/a intamplat cu obiectul observat. 
+
+
+
+Implemented in \mbox{\hyperlink{class_proiect_1_1_form1_a1640483d82968a2bc132c71bdebe0c5c}{Proiect.\+Form1}}.
+
+\Hypertarget{interface_proiect_1_1_i_observable_obj_a8b9b804bdee569c3676699c2ecdc118d}\index{Proiect.IObservableObj@{Proiect.IObservableObj}!RemoveSubscriber@{RemoveSubscriber}}
+\index{RemoveSubscriber@{RemoveSubscriber}!Proiect.IObservableObj@{Proiect.IObservableObj}}
+\doxysubsubsection{\texorpdfstring{RemoveSubscriber()}{RemoveSubscriber()}}
+{\footnotesize\ttfamily \label{interface_proiect_1_1_i_observable_obj_a8b9b804bdee569c3676699c2ecdc118d} 
+void Proiect.\+IObservable\+Obj.\+Remove\+Subscriber (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_proiect_1_1_i_subscriber}{ISubscriber}}}]{subscriber}{}\end{DoxyParamCaption})}
+
+
+
+Functie pentru stergerea din lista a unui urmaritor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em subscriber} & \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_proiect_1_1_form1_ae457bec5f1b87416d66ad0bbe8eeb3a3}{Proiect.\+Form1}}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Vasile/\+Magic\+Triangle/\+IObservable\+Obj/\mbox{\hyperlink{_i_observable_obj_8cs}{IObservable\+Obj.\+cs}}\end{DoxyCompactItemize}
