@@ -71,9 +71,9 @@ namespace Proiect
             // pictureBox1
             // 
             this.pictureBox1.Location = new System.Drawing.Point(44, 138);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1609, 604);
+            this.pictureBox1.Size = new System.Drawing.Size(1813, 807);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
@@ -81,10 +81,11 @@ namespace Proiect
             // checkBoxBisectoare
             // 
             this.checkBoxBisectoare.AutoSize = true;
-            this.checkBoxBisectoare.Location = new System.Drawing.Point(1035, 33);
-            this.checkBoxBisectoare.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBoxBisectoare.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxBisectoare.Location = new System.Drawing.Point(1251, 29);
+            this.checkBoxBisectoare.Margin = new System.Windows.Forms.Padding(4);
             this.checkBoxBisectoare.Name = "checkBoxBisectoare";
-            this.checkBoxBisectoare.Size = new System.Drawing.Size(97, 21);
+            this.checkBoxBisectoare.Size = new System.Drawing.Size(112, 24);
             this.checkBoxBisectoare.TabIndex = 1;
             this.checkBoxBisectoare.Text = "Bisectoare";
             this.checkBoxBisectoare.UseVisualStyleBackColor = true;
@@ -93,10 +94,11 @@ namespace Proiect
             // checkBoxMediane
             // 
             this.checkBoxMediane.AutoSize = true;
-            this.checkBoxMediane.Location = new System.Drawing.Point(1035, 89);
-            this.checkBoxMediane.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBoxMediane.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxMediane.Location = new System.Drawing.Point(1251, 89);
+            this.checkBoxMediane.Margin = new System.Windows.Forms.Padding(4);
             this.checkBoxMediane.Name = "checkBoxMediane";
-            this.checkBoxMediane.Size = new System.Drawing.Size(84, 21);
+            this.checkBoxMediane.Size = new System.Drawing.Size(94, 24);
             this.checkBoxMediane.TabIndex = 2;
             this.checkBoxMediane.Text = "Mediane";
             this.checkBoxMediane.UseVisualStyleBackColor = true;
@@ -105,10 +107,11 @@ namespace Proiect
             // checkBoxInaltimi
             // 
             this.checkBoxInaltimi.AutoSize = true;
-            this.checkBoxInaltimi.Location = new System.Drawing.Point(1191, 33);
-            this.checkBoxInaltimi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBoxInaltimi.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxInaltimi.Location = new System.Drawing.Point(1487, 29);
+            this.checkBoxInaltimi.Margin = new System.Windows.Forms.Padding(4);
             this.checkBoxInaltimi.Name = "checkBoxInaltimi";
-            this.checkBoxInaltimi.Size = new System.Drawing.Size(73, 21);
+            this.checkBoxInaltimi.Size = new System.Drawing.Size(84, 24);
             this.checkBoxInaltimi.TabIndex = 3;
             this.checkBoxInaltimi.Text = "Inaltimi";
             this.checkBoxInaltimi.UseVisualStyleBackColor = true;
@@ -117,10 +120,11 @@ namespace Proiect
             // checkBoxCercCircumscris
             // 
             this.checkBoxCercCircumscris.AutoSize = true;
-            this.checkBoxCercCircumscris.Location = new System.Drawing.Point(1337, 31);
-            this.checkBoxCercCircumscris.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBoxCercCircumscris.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxCercCircumscris.Location = new System.Drawing.Point(1697, 29);
+            this.checkBoxCercCircumscris.Margin = new System.Windows.Forms.Padding(4);
             this.checkBoxCercCircumscris.Name = "checkBoxCercCircumscris";
-            this.checkBoxCercCircumscris.Size = new System.Drawing.Size(133, 21);
+            this.checkBoxCercCircumscris.Size = new System.Drawing.Size(160, 24);
             this.checkBoxCercCircumscris.TabIndex = 4;
             this.checkBoxCercCircumscris.Text = "Cerc circumscris";
             this.checkBoxCercCircumscris.UseVisualStyleBackColor = true;
@@ -129,10 +133,11 @@ namespace Proiect
             // checkBoxCercInscris
             // 
             this.checkBoxCercInscris.AutoSize = true;
-            this.checkBoxCercInscris.Location = new System.Drawing.Point(1337, 89);
-            this.checkBoxCercInscris.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBoxCercInscris.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxCercInscris.Location = new System.Drawing.Point(1697, 93);
+            this.checkBoxCercInscris.Margin = new System.Windows.Forms.Padding(4);
             this.checkBoxCercInscris.Name = "checkBoxCercInscris";
-            this.checkBoxCercInscris.Size = new System.Drawing.Size(103, 21);
+            this.checkBoxCercInscris.Size = new System.Drawing.Size(122, 24);
             this.checkBoxCercInscris.TabIndex = 5;
             this.checkBoxCercInscris.Text = "Cerc inscris";
             this.checkBoxCercInscris.UseVisualStyleBackColor = true;
@@ -140,8 +145,9 @@ namespace Proiect
             // 
             // buttonRescrierePunct1
             // 
+            this.buttonRescrierePunct1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonRescrierePunct1.Location = new System.Drawing.Point(44, 31);
-            this.buttonRescrierePunct1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonRescrierePunct1.Margin = new System.Windows.Forms.Padding(4);
             this.buttonRescrierePunct1.Name = "buttonRescrierePunct1";
             this.buttonRescrierePunct1.Size = new System.Drawing.Size(149, 28);
             this.buttonRescrierePunct1.TabIndex = 6;
@@ -151,8 +157,9 @@ namespace Proiect
             // 
             // buttonRescrierePunct2
             // 
-            this.buttonRescrierePunct2.Location = new System.Drawing.Point(227, 31);
-            this.buttonRescrierePunct2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonRescrierePunct2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonRescrierePunct2.Location = new System.Drawing.Point(225, 31);
+            this.buttonRescrierePunct2.Margin = new System.Windows.Forms.Padding(4);
             this.buttonRescrierePunct2.Name = "buttonRescrierePunct2";
             this.buttonRescrierePunct2.Size = new System.Drawing.Size(149, 28);
             this.buttonRescrierePunct2.TabIndex = 7;
@@ -162,8 +169,9 @@ namespace Proiect
             // 
             // buttonRescrierePunct3
             // 
-            this.buttonRescrierePunct3.Location = new System.Drawing.Point(405, 31);
-            this.buttonRescrierePunct3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonRescrierePunct3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonRescrierePunct3.Location = new System.Drawing.Point(405, 29);
+            this.buttonRescrierePunct3.Margin = new System.Windows.Forms.Padding(4);
             this.buttonRescrierePunct3.Name = "buttonRescrierePunct3";
             this.buttonRescrierePunct3.Size = new System.Drawing.Size(149, 28);
             this.buttonRescrierePunct3.TabIndex = 8;
@@ -173,8 +181,9 @@ namespace Proiect
             // 
             // buttonAfisareValori
             // 
+            this.buttonAfisareValori.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonAfisareValori.Location = new System.Drawing.Point(405, 89);
-            this.buttonAfisareValori.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonAfisareValori.Margin = new System.Windows.Forms.Padding(4);
             this.buttonAfisareValori.Name = "buttonAfisareValori";
             this.buttonAfisareValori.Size = new System.Drawing.Size(149, 28);
             this.buttonAfisareValori.TabIndex = 9;
@@ -184,18 +193,20 @@ namespace Proiect
             // 
             // richTextBoxCalculate
             // 
-            this.richTextBoxCalculate.Location = new System.Drawing.Point(577, 31);
-            this.richTextBoxCalculate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.richTextBoxCalculate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.richTextBoxCalculate.Location = new System.Drawing.Point(609, 29);
+            this.richTextBoxCalculate.Margin = new System.Windows.Forms.Padding(4);
             this.richTextBoxCalculate.Name = "richTextBoxCalculate";
-            this.richTextBoxCalculate.Size = new System.Drawing.Size(363, 99);
+            this.richTextBoxCalculate.Size = new System.Drawing.Size(591, 99);
             this.richTextBoxCalculate.TabIndex = 11;
             this.richTextBoxCalculate.Text = "";
             this.richTextBoxCalculate.TextChanged += new System.EventHandler(this.richTextBoxCalculate_TextChanged);
             // 
             // buttonHelp
             // 
-            this.buttonHelp.Location = new System.Drawing.Point(1408, 768);
-            this.buttonHelp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonHelp.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonHelp.Location = new System.Drawing.Point(1578, 974);
+            this.buttonHelp.Margin = new System.Windows.Forms.Padding(4);
             this.buttonHelp.Name = "buttonHelp";
             this.buttonHelp.Size = new System.Drawing.Size(100, 28);
             this.buttonHelp.TabIndex = 12;
@@ -205,8 +216,9 @@ namespace Proiect
             // 
             // buttonExit
             // 
-            this.buttonExit.Location = new System.Drawing.Point(1553, 768);
-            this.buttonExit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonExit.Location = new System.Drawing.Point(1700, 974);
+            this.buttonExit.Margin = new System.Windows.Forms.Padding(4);
             this.buttonExit.Name = "buttonExit";
             this.buttonExit.Size = new System.Drawing.Size(100, 28);
             this.buttonExit.TabIndex = 13;
@@ -216,8 +228,9 @@ namespace Proiect
             // 
             // buttonResetare
             // 
+            this.buttonResetare.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonResetare.Location = new System.Drawing.Point(44, 89);
-            this.buttonResetare.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonResetare.Margin = new System.Windows.Forms.Padding(4);
             this.buttonResetare.Name = "buttonResetare";
             this.buttonResetare.Size = new System.Drawing.Size(149, 28);
             this.buttonResetare.TabIndex = 14;
@@ -228,10 +241,11 @@ namespace Proiect
             // checkBoxMediatoare
             // 
             this.checkBoxMediatoare.AutoSize = true;
-            this.checkBoxMediatoare.Location = new System.Drawing.Point(1191, 89);
+            this.checkBoxMediatoare.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxMediatoare.Location = new System.Drawing.Point(1487, 89);
             this.checkBoxMediatoare.Margin = new System.Windows.Forms.Padding(4);
             this.checkBoxMediatoare.Name = "checkBoxMediatoare";
-            this.checkBoxMediatoare.Size = new System.Drawing.Size(101, 21);
+            this.checkBoxMediatoare.Size = new System.Drawing.Size(114, 24);
             this.checkBoxMediatoare.TabIndex = 15;
             this.checkBoxMediatoare.Text = "Mediatoare";
             this.checkBoxMediatoare.UseVisualStyleBackColor = true;
@@ -241,7 +255,7 @@ namespace Proiect
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1691, 811);
+            this.ClientSize = new System.Drawing.Size(1902, 1033);
             this.Controls.Add(this.checkBoxMediatoare);
             this.Controls.Add(this.buttonResetare);
             this.Controls.Add(this.buttonExit);
@@ -257,7 +271,7 @@ namespace Proiect
             this.Controls.Add(this.checkBoxMediane);
             this.Controls.Add(this.checkBoxBisectoare);
             this.Controls.Add(this.pictureBox1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

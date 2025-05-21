@@ -56,6 +56,12 @@ namespace Proiect
             pictureBox1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right | AnchorStyles.Bottom;
             buttonExit.Anchor = AnchorStyles.Bottom;
             buttonHelp.Anchor = AnchorStyles.Bottom;
+            checkBoxBisectoare.Anchor = AnchorStyles.Top | AnchorStyles.Left ;
+            checkBoxInaltimi.Anchor = AnchorStyles.Top | AnchorStyles.Left;
+            checkBoxMediane.Anchor = AnchorStyles.Top | AnchorStyles.Left;
+            checkBoxMediatoare.Anchor = AnchorStyles.Top | AnchorStyles.Left ;
+            checkBoxCercInscris.Anchor = AnchorStyles.Top | AnchorStyles.Left ;
+            checkBoxCercCircumscris.Anchor = AnchorStyles.Top | AnchorStyles.Left;
 
             //initializarea observatorului 
             new TriangleSubscriber(this);

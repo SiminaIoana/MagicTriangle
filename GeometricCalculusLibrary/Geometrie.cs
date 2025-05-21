@@ -179,7 +179,7 @@ namespace Proiect
             double l2 = CalculeazaDistanta(p2, p3);
             double l3 = CalculeazaDistanta(p3, p1);
 
-            return l1 + l2 + l3;
+            return Math.Round((l1 + l2 + l3),3);
         }
 
 
@@ -198,7 +198,7 @@ namespace Proiect
 
             double p = (l1 + l2 + l3) / 2;
 
-            return Math.Sqrt(p * (p - l1) * (p - l2) * (p - l3));
+            return Math.Round(Math.Sqrt(p * (p - l1) * (p - l2) * (p - l3)),3);
         }
 
 
