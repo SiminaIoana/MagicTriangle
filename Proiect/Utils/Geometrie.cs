@@ -1,4 +1,26 @@
-﻿using System;
+﻿/**************************************************************************
+ *                                                                        *
+ *  File:        Geometrie.cs                                             *
+ *  Copyright:   (c) 2025, Simina Rusu, Codrina Tăbușcă, Tudor Rotariu,   *
+ *               Vasile Leșan                                             *
+ *  E-mail:      simina-ioana.rusu@student.tuiasi.ro,                     *
+ *               codrina-florentina.tabusca@student.tuiasi.ro,            *
+ *               tudor-liviu.rotariu@student.tuiasi.ro                    *
+ *               vasile.lesan@student.tuiasi.ro                           *
+ *  Description: Utility class providing geometric calculations and       *
+ *               accessors for areas, perimeters, lines etc.              *
+ *                                                                        *
+ *  This program is free software; you can redistribute it and/or modify  *
+ *  it under the terms of the GNU General Public License as published by  *
+ *  the Free Software Foundation. This program is distributed in the      *
+ *  hope that it will be useful, but WITHOUT ANY WARRANTY; without even   *
+ *  the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR   *
+ *  PURPOSE. See the GNU General Public License for more details.         *
+ *                                                                        *
+ **************************************************************************/
+
+
+using System;
 using System.Drawing;
 
 namespace Proiect.Utils
@@ -64,6 +86,7 @@ namespace Proiect.Utils
             return CentruCercInscris(p1, p2, p3);
         }
 
+
         /// <summary>
         /// Returnează raza cercului înscris în triunghiul format de cele trei puncte date.
         /// </summary>
@@ -75,6 +98,7 @@ namespace Proiect.Utils
         {
             return RazaCercInscris(p1, p2, p3);
         }
+
 
         /// <summary>
         /// Returnează centrul cercului circumscris triunghiului definit de cele trei puncte date.
@@ -88,6 +112,7 @@ namespace Proiect.Utils
             return CentruCercCircumscris(p1, p2, p3);
         }
 
+
         /// <summary>
         /// Returnează raza cercului circumscris triunghiului definit de cele trei puncte date.
         /// </summary>
@@ -100,6 +125,15 @@ namespace Proiect.Utils
             return RazaCercCircumscris(p1, p2, p3);
         }
 
+
+        /// <summary>
+        /// Calculează punctul de intersecție al celor două drepte definite de punctele (p1, p2) și (p3, p4).
+        /// </summary>
+        /// <param name="p1">Primul punct al primei drepte.</param>
+        /// <param name="p2">Al doilea punct al primei drepte (tip PointF pentru precizie zecimală).</param>
+        /// <param name="p3">Primul punct al celei de-a doua drepte.</param>
+        /// <param name="p4">Al doilea punct al celei de-a doua drepte.</param>
+        /// <returns>Punctul de intersecție ca un obiect PointF.</returns>
         public static PointF GetIntersectie(Point p1, PointF p2, Point p3, Point p4)
         {
             return CalculeazaIntersectie(p1, p2, p3, p4);
@@ -130,6 +164,7 @@ namespace Proiect.Utils
             }
         }
 
+
         /// <summary>
         /// Calculează perimetrul triunghiului definit de cele trei puncte date.
         /// </summary>
@@ -146,6 +181,7 @@ namespace Proiect.Utils
 
             return l1 + l2 + l3;
         }
+
 
         /// <summary>
         /// Calculează aria triunghiului definit de cele trei puncte date folosind formula lui Heron.
@@ -165,6 +201,7 @@ namespace Proiect.Utils
             return Math.Sqrt(p * (p - l1) * (p - l2) * (p - l3));
         }
 
+
         /// <summary>
         /// Calculează centrul de greutate al triunghiului definit de cele trei puncte
         /// </summary>
@@ -179,6 +216,7 @@ namespace Proiect.Utils
 
             return new PointF(x, y);
         }
+
 
         /// <summary>
         /// Calculează centrul cercului înscris în triunghiul definit de cele trei puncte
@@ -201,6 +239,7 @@ namespace Proiect.Utils
             return new PointF(x, y);
         }
 
+
         /// <summary>
         /// Calculează raza cercului înscris în triunghiul definit de cele trei puncte
         /// </summary>
@@ -216,6 +255,7 @@ namespace Proiect.Utils
             return arie / s;
 
         }
+
 
         /// <summary>
         /// Calculează centrul cercului circumscris triunghiului definit de cele trei puncte
@@ -247,6 +287,7 @@ namespace Proiect.Utils
             return new PointF(ux, uy);
         }
 
+
         /// <summary>
         /// Calculează raza cercului circumscris triunghiului definit de cele trei puncte
         /// </summary>
@@ -270,13 +311,22 @@ namespace Proiect.Utils
             return (a * b * c) / (4 * aria);
         }
 
+
+        /// <summary>
+        /// Functie ce va returna punctul de intersectie dintre o dreapta si perpendiculara dusa dintr-un punct pe acea dreapta
+        /// </summary>
+        /// <param name="p">Punctul din care se coboară perpendiculara.</param>
+        /// <param name="startL">Punctul de start al dreptei.</param>
+        /// <param name="endL">Punctul de sfârșit al dreptei.</param>
+        /// <returns>Punctul de pe dreaptă unde cade perpendiculara din p.</returns>
         public static PointF GetPerpendicularaDinPunctPeDreapta(Point p, Point startL, Point endL)
         {
             return PerpendicularaPunctDreapta(p, startL, endL);
         }
 
+
         /// <summary>
-        /// Functie ce va returna punctul de intersectie dintre o dreapta si perpendiculara dusa dintr-un punct pe acea dreapta
+        /// Functie ce va calcula punctul de intersectie dintre o dreapta si perpendiculara dusa dintr-un punct pe acea dreapta
         /// </summary>
         /// <param name="punct"></param>
         /// <param name="start"></param>
@@ -310,6 +360,7 @@ namespace Proiect.Utils
 
             return new PointF(Hx, Hy);
         }
+
 
         /// <summary>
         /// Calculează punctul de intersecție dintre două drepte definite de două perechi de puncte.

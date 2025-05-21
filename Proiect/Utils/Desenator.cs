@@ -1,4 +1,25 @@
-﻿using System;
+﻿/**************************************************************************
+ *                                                                        *
+ *  File:        Desenator.cs                                             *
+ *  Copyright:   (c) 2025, Simina Rusu, Codrina Tăbușcă, Tudor Rotariu,   *
+ *               Vasile Leșan                                             *
+ *  E-mail:      simina-ioana.rusu@student.tuiasi.ro,                     *
+ *               codrina-florentina.tabusca@student.tuiasi.ro,            *
+ *               tudor-liviu.rotariu@student.tuiasi.ro                    *
+ *               vasile.lesan@student.tuiasi.ro                           *
+ *  Description: Windows Forms UI for rendering and displaying triangles. *
+ *                                                                        *
+ *  This program is free software; you can redistribute it and/or modify  *
+ *  it under the terms of the GNU General Public License as published by  *
+ *  the Free Software Foundation. This program is distributed in the      *
+ *  hope that it will be useful, but WITHOUT ANY WARRANTY; without even   *
+ *  the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR   *
+ *  PURPOSE. See the GNU General Public License for more details.         *
+ *                                                                        *
+ **************************************************************************/
+
+
+using System;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 
@@ -121,6 +142,15 @@ namespace Proiect.Utils
 
         }
 
+
+
+        /// <summary>
+        /// Desenează medianele triunghiului format din cele trei puncte date și marchează centrul de greutate.
+        /// </summary>
+        /// <param name="g">Contextul grafic pe care se realizează desenul.</param>
+        /// <param name="p1">Primul vârf al triunghiului.</param>
+        /// <param name="p2">Al doilea vârf al triunghiului.</param>
+        /// <param name="p3">Al treilea vârf al triunghiului.</param>
         private static void DesenareMediana(Graphics g, Point p1, Point p2, Point p3)
         {
             //calcul mijloc pentru fiecare dreapta a triunghiului
@@ -139,8 +169,8 @@ namespace Proiect.Utils
 
             int diametru = 10;
             g.FillEllipse(Brushes.DeepPink, centruGreutate.X - diametru / 2, centruGreutate.Y - diametru / 2, diametru, diametru);
-
         }
+
 
         /// <summary>
         /// Desenează înălțimile triunghiului format de punctele p1, p2 și p3,
@@ -176,6 +206,14 @@ namespace Proiect.Utils
             g.FillEllipse(Brushes.DarkGreen, ortocentru.X - diametru / 2, ortocentru.Y - diametru / 2, diametru, diametru);
         }
 
+
+
+        /// <summary>
+        /// Desenează o prelungire punctată a laturii definite de două puncte, extinzând linia în ambele direcții.
+        /// </summary>
+        /// <param name="g">Contextul grafic pe care se face desenul.</param>
+        /// <param name="p1">Primul punct care definește latura.</param>
+        /// <param name="p2">Al doilea punct care definește latura.</param>
         private static void DesenarePrelungireLatura(Graphics g, Point p1, Point p2)
         {
             const float extensie = 100;
@@ -201,6 +239,14 @@ namespace Proiect.Utils
             }
         }
 
+
+
+        /// <summary>
+        /// Desenează mediatoarea laturii definite de două puncte, extinzând linia perpendiculară pe mijlocul laturii.
+        /// </summary>
+        /// <param name="g">Contextul grafic pentru desen.</param>
+        /// <param name="p1">Primul punct al laturii.</param>
+        /// <param name="p2">Al doilea punct al laturii.</param>
         private static void DesenarePrelungireMediatoare(Graphics g, Point p1, Point p2)
         {
             //calculam mijlocul laturei formata de punctele p1 si p2
@@ -229,6 +275,15 @@ namespace Proiect.Utils
             }
         }
 
+
+
+        /// <summary>
+        /// Desenează mediatoarea unei laturi ca linie de la mijlocul laturii până la centrul cercului circumscris.
+        /// </summary>
+        /// <param name="g">Contextul grafic pentru desen.</param>
+        /// <param name="p1">Primul punct al laturii.</param>
+        /// <param name="p2">Al doilea punct al laturii.</param>
+        /// <param name="centru">Centrul cercului circumscris triunghiului.</param>
         private static void DesenareMediatoareLatura(Graphics g, Point p1, Point p2, PointF centru)
         {
             // Calculăm mijlocul laturii formate de p1 și p2
@@ -239,6 +294,16 @@ namespace Proiect.Utils
             g.DrawLine(p, mijloc, centru);
         }
 
+
+
+
+        /// <summary>
+        /// Desenează mediatoarele laturilor triunghiului și marchează centrul cercului circumscris.
+        /// </summary>
+        /// <param name="g">Contextul grafic pentru desen.</param>
+        /// <param name="p1">Primul vârf al triunghiului.</param>
+        /// <param name="p2">Al doilea vârf al triunghiului.</param>
+        /// <param name="p3">Al treilea vârf al triunghiului.</param>
         private static void DesenareMediatoare(Graphics g, Point p1, Point p2, Point p3)
         {
             PointF centru = Geometrie.GetCentruCercCircumscris(p1, p2, p3);
@@ -251,9 +316,10 @@ namespace Proiect.Utils
             DesenareMediatoareLatura(g, p2, p3, centru);
             DesenareMediatoareLatura(g, p1, p3, centru);
 
-            // Desenăm centrul cercului circumscris ca un punct
+            // Desenăm centrul cercului circumscris ca un punct roșu vizibil
             int diametru = 10;
             g.FillEllipse(Brushes.Red, centru.X - diametru / 2, centru.Y - diametru / 2, diametru, diametru);
         }
+
     }
 }

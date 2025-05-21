@@ -1,6 +1,6 @@
 ﻿/**************************************************************************
  *                                                                        *
- *  File:        ISubscriber.cs                                           *
+ *  File:        Program.cs                                               *
  *  Copyright:   (c) 2025, Simina Rusu, Codrina Tăbușcă, Tudor Rotariu,   *
  *               Vasile Leșan                                             *
  *  E-mail:      simina-ioana.rusu@student.tuiasi.ro,                     *

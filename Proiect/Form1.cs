@@ -7,8 +7,8 @@
  *               codrina-florentina.tabusca@student.tuiasi.ro,            *
  *               tudor-liviu.rotariu@student.tuiasi.ro                    *
  *               vasile.lesan@student.tuiasi.ro                           *
- *  Description: Triangle drawing app with point selection, calculates    *
- *               area, perimeter, centers, and notifies observers.        *
+ *  Description: Windows Forms app for drawing and analyzing a            *
+ *               triangle with real-time updates.                         *
  *                                                                        *
  *  This program is free software; you can redistribute it and/or modify  *
  *  it under the terms of the GNU General Public License as published by  *
@@ -380,6 +380,11 @@ namespace Proiect
             Notify();
         }
 
+        /// <summary>
+        /// Eveniment care se declanșează când se schimbă starea checkbox-ului pentru afișarea mediatoarei
+        /// </summary>
+        /// <param name="sender">Obiectul care a generat evenimentul</param>
+        /// <param name="e">Datele evenimentului</param>
         private void checkBoxMediatoare_CheckedChanged(object sender, EventArgs e)
         {
             pictureBox1.Invalidate();
@@ -406,13 +411,5 @@ namespace Proiect
             pictureBox1.Invalidate();
             Notify();
         }
-
-        /// <summary>
-        /// Desenează medianele triunghiului definit de punctele p1, p2 și p3.
-        /// </summary>
-        /// <param name="g">Obiectul Graphics pe care se face desenarea.</param>
-        /// <param name="p1">Primul vârf al triunghiului.</param>
-        /// <param name="p2">Al doilea vârf al triunghiului.</param>
-        /// <param name="p3">Al treilea vârf al triunghiului.</param>      
     }
 }
