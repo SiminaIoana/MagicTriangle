@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.13.35825.156
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.35731.53
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MagicTriangle", "Proiect\MagicTriangle.csproj", "{A6729781-5803-4B3E-8A46-B142BBDC6FDA}"
 EndProject
@@ -10,6 +10,12 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ISubscriberLibrary", "ISubscriberLibrary\ISubscriberLibrary.csproj", "{3CF73C22-50AA-45EB-88D5-BA232F2839C3}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TriangleTest", "TriangleTest\TriangleTest.csproj", "{9DECE17C-BC4E-4426-B694-187A12D2B187}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ErrorHandlerLibrary", "ErrorHandlerLibrary\ErrorHandlerLibrary.csproj", "{14EFE37E-755E-4892-8F62-326BA61FCE2E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeometricCalculusLibrary", "GeometricCalculusLibrary\GeometricCalculusLibrary.csproj", "{96B69C3D-B137-401F-AB4D-5C521CE6EFD5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DrawingLibrary", "DrawingLibrary\DrawingLibrary.csproj", "{3E3066C2-1A9E-4CF8-96D9-51B7540F5941}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +39,18 @@ Global
 		{9DECE17C-BC4E-4426-B694-187A12D2B187}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9DECE17C-BC4E-4426-B694-187A12D2B187}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9DECE17C-BC4E-4426-B694-187A12D2B187}.Release|Any CPU.Build.0 = Release|Any CPU
+		{14EFE37E-755E-4892-8F62-326BA61FCE2E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14EFE37E-755E-4892-8F62-326BA61FCE2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14EFE37E-755E-4892-8F62-326BA61FCE2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14EFE37E-755E-4892-8F62-326BA61FCE2E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{96B69C3D-B137-401F-AB4D-5C521CE6EFD5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96B69C3D-B137-401F-AB4D-5C521CE6EFD5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96B69C3D-B137-401F-AB4D-5C521CE6EFD5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96B69C3D-B137-401F-AB4D-5C521CE6EFD5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3E3066C2-1A9E-4CF8-96D9-51B7540F5941}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E3066C2-1A9E-4CF8-96D9-51B7540F5941}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E3066C2-1A9E-4CF8-96D9-51B7540F5941}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E3066C2-1A9E-4CF8-96D9-51B7540F5941}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
