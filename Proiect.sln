@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IObservableLibrary", "IObse
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ISubscriberLibrary", "ISubscriberLibrary\ISubscriberLibrary.csproj", "{3CF73C22-50AA-45EB-88D5-BA232F2839C3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TriangleTest", "TriangleTest\TriangleTest.csproj", "{9DECE17C-BC4E-4426-B694-187A12D2B187}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{3CF73C22-50AA-45EB-88D5-BA232F2839C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3CF73C22-50AA-45EB-88D5-BA232F2839C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3CF73C22-50AA-45EB-88D5-BA232F2839C3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9DECE17C-BC4E-4426-B694-187A12D2B187}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9DECE17C-BC4E-4426-B694-187A12D2B187}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9DECE17C-BC4E-4426-B694-187A12D2B187}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9DECE17C-BC4E-4426-B694-187A12D2B187}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
