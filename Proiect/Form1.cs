@@ -151,6 +151,7 @@ namespace Proiect
                 //MessageBox.Show("Trebuie setate toate punctele!");
                 ErrorHandler.MesajEroare(new Exception("Trebuie să setați toate cele 3 puncte ale triunghiului."));
             }
+            richTextBoxCalculate.Text = "";
             vP1 = 0;
             nOfPoints = 2;
         }
@@ -166,6 +167,7 @@ namespace Proiect
             {
                 ErrorHandler.MesajEroare(new Exception("Trebuie să setați toate cele 3 puncte ale triunghiului."));
             }
+            richTextBoxCalculate.Text = "";
             vP3 = 0;
             nOfPoints = 2;
 
@@ -234,6 +236,7 @@ namespace Proiect
                 ErrorHandler.MesajEroare(new Exception("Trebuie să setați toate cele 3 puncte ale triunghiului."));
                 return;
             }
+            richTextBoxCalculate.Text = "";
             vP2 = 0;
             nOfPoints = 2;
         }
@@ -326,6 +329,7 @@ namespace Proiect
                 if (checkBoxCercCircumscris.Checked)
                     Desenator.DesenareCerCircumscris(e.Graphics, p1, p2, p3);
             }
+            
         }
 
         /// <summary>
@@ -412,6 +416,7 @@ namespace Proiect
             nOfPoints = 0;
 
             pictureBox1.Invalidate();
+            richTextBoxCalculate.Text = "";
             Notify();
         }
     }
