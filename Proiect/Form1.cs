@@ -52,8 +52,7 @@ namespace Proiect
             InitializeComponent();
 
             //facem interfata mai mare pentru o vizualizare mai buna
-            this.WindowState = FormWindowState.Maximized;
-            pictureBox1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right | AnchorStyles.Bottom;
+            /*this.WindowState = FormWindowState.Maximized;
             buttonExit.Anchor = AnchorStyles.Bottom;
             buttonHelp.Anchor = AnchorStyles.Bottom;
             checkBoxBisectoare.Anchor = AnchorStyles.Top | AnchorStyles.Left ;
@@ -61,7 +60,7 @@ namespace Proiect
             checkBoxMediane.Anchor = AnchorStyles.Top | AnchorStyles.Left;
             checkBoxMediatoare.Anchor = AnchorStyles.Top | AnchorStyles.Left ;
             checkBoxCercInscris.Anchor = AnchorStyles.Top | AnchorStyles.Left ;
-            checkBoxCercCircumscris.Anchor = AnchorStyles.Top | AnchorStyles.Left;
+            checkBoxCercCircumscris.Anchor = AnchorStyles.Top | AnchorStyles.Left;*/
 
             //initializarea observatorului 
             new TriangleSubscriber(this);

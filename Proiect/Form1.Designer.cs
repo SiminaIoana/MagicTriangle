@@ -73,7 +73,7 @@ namespace Proiect
             this.pictureBox1.Location = new System.Drawing.Point(44, 138);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1813, 807);
+            this.pictureBox1.Size = new System.Drawing.Size(1694, 726);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
@@ -108,7 +108,7 @@ namespace Proiect
             // 
             this.checkBoxInaltimi.AutoSize = true;
             this.checkBoxInaltimi.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBoxInaltimi.Location = new System.Drawing.Point(1487, 29);
+            this.checkBoxInaltimi.Location = new System.Drawing.Point(1417, 29);
             this.checkBoxInaltimi.Margin = new System.Windows.Forms.Padding(4);
             this.checkBoxInaltimi.Name = "checkBoxInaltimi";
             this.checkBoxInaltimi.Size = new System.Drawing.Size(84, 24);
@@ -121,7 +121,7 @@ namespace Proiect
             // 
             this.checkBoxCercCircumscris.AutoSize = true;
             this.checkBoxCercCircumscris.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBoxCercCircumscris.Location = new System.Drawing.Point(1697, 29);
+            this.checkBoxCercCircumscris.Location = new System.Drawing.Point(1578, 29);
             this.checkBoxCercCircumscris.Margin = new System.Windows.Forms.Padding(4);
             this.checkBoxCercCircumscris.Name = "checkBoxCercCircumscris";
             this.checkBoxCercCircumscris.Size = new System.Drawing.Size(160, 24);
@@ -134,7 +134,7 @@ namespace Proiect
             // 
             this.checkBoxCercInscris.AutoSize = true;
             this.checkBoxCercInscris.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBoxCercInscris.Location = new System.Drawing.Point(1697, 93);
+            this.checkBoxCercInscris.Location = new System.Drawing.Point(1578, 89);
             this.checkBoxCercInscris.Margin = new System.Windows.Forms.Padding(4);
             this.checkBoxCercInscris.Name = "checkBoxCercInscris";
             this.checkBoxCercInscris.Size = new System.Drawing.Size(122, 24);
@@ -205,7 +205,7 @@ namespace Proiect
             // buttonHelp
             // 
             this.buttonHelp.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonHelp.Location = new System.Drawing.Point(1578, 974);
+            this.buttonHelp.Location = new System.Drawing.Point(1511, 890);
             this.buttonHelp.Margin = new System.Windows.Forms.Padding(4);
             this.buttonHelp.Name = "buttonHelp";
             this.buttonHelp.Size = new System.Drawing.Size(100, 28);
@@ -217,7 +217,7 @@ namespace Proiect
             // buttonExit
             // 
             this.buttonExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonExit.Location = new System.Drawing.Point(1700, 974);
+            this.buttonExit.Location = new System.Drawing.Point(1638, 890);
             this.buttonExit.Margin = new System.Windows.Forms.Padding(4);
             this.buttonExit.Name = "buttonExit";
             this.buttonExit.Size = new System.Drawing.Size(100, 28);
@@ -242,7 +242,7 @@ namespace Proiect
             // 
             this.checkBoxMediatoare.AutoSize = true;
             this.checkBoxMediatoare.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBoxMediatoare.Location = new System.Drawing.Point(1487, 89);
+            this.checkBoxMediatoare.Location = new System.Drawing.Point(1417, 89);
             this.checkBoxMediatoare.Margin = new System.Windows.Forms.Padding(4);
             this.checkBoxMediatoare.Name = "checkBoxMediatoare";
             this.checkBoxMediatoare.Size = new System.Drawing.Size(114, 24);
@@ -255,7 +255,9 @@ namespace Proiect
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1902, 1033);
+            this.AutoSize = true;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.ClientSize = new System.Drawing.Size(1784, 940);
             this.Controls.Add(this.checkBoxMediatoare);
             this.Controls.Add(this.buttonResetare);
             this.Controls.Add(this.buttonExit);
@@ -273,7 +275,9 @@ namespace Proiect
             this.Controls.Add(this.pictureBox1);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
