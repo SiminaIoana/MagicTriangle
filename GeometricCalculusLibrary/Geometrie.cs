@@ -152,7 +152,7 @@ namespace Proiect
         {
             if (p1 == p2)
             {
-                throw new ArgumentException("Aceste puncte sunt identice");
+                throw new PuncteIdenticeException($"Punctele p1({p1.X},{p1.Y}) și p2({p2.X},{p2.Y}) sunt identice.");
             }
             else
             {
@@ -177,7 +177,7 @@ namespace Proiect
 
             if (p1 == p2 || p2 == p3 || p1 == p3)
             {
-                throw new ArgumentException("Aceste puncte sunt identice");
+                throw new PuncteIdenticeException("Cel puțin două vârfuri ale triunghiului sunt identice.");
             }
 
             double l1 = CalculeazaDistanta(p1, p2);
@@ -197,19 +197,24 @@ namespace Proiect
         /// <returns>Aria triunghiului.</returns>
         private static double Arie(Point p1, Point p2, Point p3)
         {
-
             if (p1 == p2 || p2 == p3 || p1 == p3)
             {
-                throw new ArgumentException("Aceste puncte sunt identice");
-            } 
+                throw new PuncteIdenticeException("La calcularea ariei, două vârfuri sunt identice.");
+            }
 
             double l1 = CalculeazaDistanta(p1, p2);
             double l2 = CalculeazaDistanta(p2, p3);
             double l3 = CalculeazaDistanta(p3, p1);
-
             double p = (l1 + l2 + l3) / 2;
 
-            return Math.Round(Math.Sqrt(p * (p - l1) * (p - l2) * (p - l3)),3);
+            double arie = Math.Sqrt(p * (p - l1) * (p - l2) * (p - l3));
+            if (arie == 0)
+            {
+                // Aria zero înseamnă punctele sunt coliniare
+                throw new PuncteColiniareException($"Punctele ({p1.X},{p1.Y}), ({p2.X},{p2.Y}) și ({p3.X},{p3.Y}) sunt coliniare.");
+            }
+
+            return Math.Round(arie, 3);
         }
 
 
@@ -397,7 +402,8 @@ namespace Proiect
 
             if (determinant == 0)
             {
-                throw new ArgumentException("Liniile nu se intersecteaza!");
+                throw new DrepteParaleleException($"Dreptele ({p1.X},{p1.Y})–({p2.X},{p2.Y}) " +
+                    $"și ({p3.X},{p3.Y})–({p4.X},{p4.Y}) sunt paralele.");
             }
 
             float x = (b2 * c1 - b1 * c2) / determinant;

@@ -10,19 +10,11 @@
  *  Description: Utility class to display detailed error messages in a    *
  *               message box with caller info for easier debugging.       *
  *                                                                        *
- *  This program is free software; you can redistribute it and/or modify  *
- *  it under the terms of the GNU General Public License as published by  *
- *  the Free Software Foundation. This program is distributed in the      *
- *  hope that it will be useful, but WITHOUT ANY WARRANTY; without even   *
- *  the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR   *
- *  PURPOSE. See the GNU General Public License for more details.         *
- *                                                                        *
  **************************************************************************/
 
 using System;
 using System.Runtime.CompilerServices;
 using System.Windows.Forms;
-
 
 namespace Proiect
 {
@@ -35,15 +27,31 @@ namespace Proiect
         /// <param name="functie">Numele funcției din care a fost apelată metoda (populat automat).</param>
         public static void MesajEroare(Exception e, [CallerMemberName] string functie = "")
         {
-            string mesaj = $"A apărut o eroare în execuția programului.";
+            string mesaj = "A apărut o eroare în execuția programului.";
 
-            // informatii detaliate pentru debug
-            mesaj += $"\n\nMesaj: {e.Message}";
-            mesaj += $"\nTip: {e.GetType().Name}";
+            // Poți diferenția pe tipul excepției, dacă vrei mesaje foarte specifice:
+            if (e is PuncteIdenticeException)
+            {
+                mesaj += "\n\nTip eroare: Puncte identice.";
+            }
+            else if (e is PuncteColiniareException)
+            {
+                mesaj += "\n\nTip eroare: Puncte coliniare.";
+            }
+            else if (e is DrepteParaleleException)
+            {
+                mesaj += "\n\nTip eroare: Drepte paralele (fără intersecție).";
+            }
+            else
+            {
+                mesaj += $"\n\nTip eroare: {e.GetType().Name}";
+            }
+
+            // Informații detaliate pentru debug
+            mesaj += $"\nMesaj: {e.Message}";
             mesaj += $"\nFuncție: {functie}";
 
             MessageBox.Show(mesaj, "Eroare critică", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
-
     }
 }
